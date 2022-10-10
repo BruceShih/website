@@ -5,9 +5,9 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal p-0">
-        <li><a href="blogs">Blog</a></li>
-        <li><a href="portfolio">Portfolio</a></li>
-        <li><a href="about">About</a></li>
+        <li><a href="/featured_articles">Article</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+        <li><a href="/about">About</a></li>
       </ul>
     </div>
   </div>

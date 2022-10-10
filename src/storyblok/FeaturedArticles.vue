@@ -2,7 +2,7 @@
 import { useStoryblokApi } from '@storyblok/astro';
 
 const api = useStoryblokApi();
-const { data: posts } = await api.get(`cdn/stories?starts_with=blog/`, {
+const { data: posts } = await api.get(`cdn/stories?starts_with=featured_articles/`, {
   version: import.meta.env.DEV ? 'draft' : 'published'
 });
 </script>

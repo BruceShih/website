@@ -5,16 +5,19 @@ import DefaultLayout from '../layouts/DefaultLayout.astro';
 
 export async function getStaticPaths() {
   const api = useStoryblokApi();
-  const { data: posts } = await api.get('cdn/stories', {
+  const { data: pages } = await api.get('cdn/stories', {
     version: import.meta.env.DEV ? 'draft' : 'published'
   });
 
-  return posts.stories.map((post: any) => ({
-    params: {
-      slug: post.full_slug === 'index' ? undefined : post.full_slug
-    },
-    props: { content: post.content }
-  }));
+  return pages.stories.map((page: any) => {
+    console.log(page.full_slug);
+    return {
+      params: {
+        slug: page.full_slug === 'index' ? undefined : page.full_slug
+      },
+      props: { content: page.content }
+    };
+  });
 }
 
 const { content } = Astro.props;

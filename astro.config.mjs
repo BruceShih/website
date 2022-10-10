@@ -8,14 +8,11 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 export default defineConfig({
   integrations: [
     storyblok({
-      // accessToken: process.env.STORYBLOK_TOKEN,
-      apiOptions: {
-        region: 'eu'
-      },
+      accessToken: process.env.STORYBLOK_TOKEN,
       components: {
         page: 'storyblok/Page',
-        post: 'storyblok/Post',
-        blogs: 'storyblok/Blogs'
+        article: 'storyblok/Article',
+        featured_articles: 'storyblok/FeaturedArticles'
       }
     }),
     vue(),
