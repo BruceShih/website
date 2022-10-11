@@ -13,6 +13,7 @@ export default defineConfig({
         page: 'storyblok/Page',
         about: 'storyblok/About',
         article: 'storyblok/Article',
+        hero: 'storyblok/Hero',
         featured_articles: 'storyblok/FeaturedArticles'
       }
     }),
