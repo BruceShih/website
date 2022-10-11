@@ -4,25 +4,32 @@ import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 
 export async function getStaticPaths() {
-  const api = useStoryblokApi();
-  const { data: pages } = await api.get('cdn/stories', {
+  const { data } = await useStoryblokApi().get('cdn/links/', {
     version: import.meta.env.DEV ? 'draft' : 'published'
   });
+  const links = Object.values(data.links);
 
-  return pages.stories.map((page: any) => {
-    console.log(page.full_slug);
-    return {
-      params: {
-        slug: page.full_slug === 'index' ? undefined : page.full_slug
-      },
-      props: { content: page.content }
-    };
-  });
+  const pages = links
+    .filter((link: any) => link.slug !== 'home')
+    .map((link: any) => {
+      return {
+        params: { slug: link.slug }
+      };
+    });
+
+  console.log(pages);
+
+  return pages;
 }
 
-const { content } = Astro.props;
+const { slug } = Astro.params;
+const { data } = await useStoryblokApi().get(`cdn/stories/${slug}`, {
+  version: import.meta.env.DEV ? 'draft' : 'published'
+});
+
+const story = data.story;
 ---
 
-<DefaultLayout title={content.title}>
-  <StoryblokComponent blok={content} />
+<DefaultLayout title={story.content.title}>
+  <StoryblokComponent blok={story.content} />
 </DefaultLayout>
