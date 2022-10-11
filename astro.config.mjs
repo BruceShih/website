@@ -11,6 +11,7 @@ export default defineConfig({
       accessToken: process.env.STORYBLOK_TOKEN,
       components: {
         page: 'storyblok/Page',
+        about: 'storyblok/About',
         article: 'storyblok/Article',
         featured_articles: 'storyblok/FeaturedArticles'
       }
