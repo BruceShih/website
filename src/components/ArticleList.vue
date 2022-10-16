@@ -10,32 +10,41 @@ const { data: posts } = await useStoryblokApi().get(
 </script>
 
 <template>
-  <div
-    v-for="post in posts.stories"
-    :key="post.id"
-    class="card card-side bg-base-100 shadow-xl"
+  <section
+    v-for="(post, index) in posts.stories"
+    :key="index"
+    class="indicator w-full"
   >
-    <figure><img src="https://placeimg.com/200/280/arch" alt="Movie" /></figure>
-    <div class="card-body">
-      <h2 class="card-title">{{ post.content.title }}</h2>
-      <p>
-        {{
-          new Date(post.published_at ?? post.created_at).toLocaleDateString(
-            undefined,
-            {
-              year: 'numeric',
-              month: 'short',
-              day: 'numeric'
-            }
-          )
-        }}
-      </p>
-      <p class="mt-2">
-        {{ post.content.description }}
-      </p>
-      <div class="card-actions justify-end">
-        <a :href="post.full_slug" class="btn btn-primary">Read More</a>
+    <span
+      class="indicator-item indicator-middle indicator-start badge badge-lg badge-ghost text-4xl text-neutral"
+    >
+      #{{ index }}
+    </span>
+    <div class="card card-side bg-base-100 w-full shadow-xl ml-5">
+      <div class="card-body">
+        <h2 class="card-title">
+          {{ post.content.title }}
+        </h2>
+        <p class="text-secondary mb-5">
+          Published at
+          {{
+            new Date(post.published_at ?? post.created_at).toLocaleDateString(
+              undefined,
+              {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+              }
+            )
+          }}
+        </p>
+        <p class="h-12 text-ellipsis overflow-hidden text-content">
+          {{ post.content.description }}
+        </p>
+        <div class="card-actions justify-end">
+          <a :href="post.full_slug" class="text-primary">Read More</a>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>

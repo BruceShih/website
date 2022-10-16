@@ -16,7 +16,7 @@
       </svg> -->
       <p>2022 © Bruce Shih</p>
     </div>
-    <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <!-- <div class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
       <a href="https://twitter.com/sp1986_tw" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +43,6 @@
           ></path>
         </svg>
       </a>
-    </div>
+    </div> -->
   </footer>
 </template>

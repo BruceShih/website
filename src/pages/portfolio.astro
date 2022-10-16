@@ -1,0 +1,11 @@
+---
+import { storyblokEditable } from '@storyblok/astro';
+import DefaultLayout from '../layouts/DefaultLayout.astro';
+import ArticleList from '../components/ArticleList.vue';
+
+const { blok } = Astro.props;
+---
+
+<DefaultLayout title="Portfolio">
+  <!-- <ArticleList {...storyblokEditable(blok)} /> -->
+</DefaultLayout>

@@ -5,11 +5,23 @@ const { blok } = Astro.props;
 ---
 
 <div class="hero min-h-screen bg-base-200" {...storyblokEditable(blok)}>
-  <div class="hero-content text-center">
-    <div class="max-w-md">
+  <div class="hero-content flex-row gap-12">
+    <div class="basis-1/2 text-right">
       <h1 class="text-5xl font-bold">{blok.title}</h1>
       <div class="py-6" set:html={renderRichText(blok.body)}></div>
       <!-- <button class="btn btn-primary">Get Started</button> -->
+    </div>
+    <div class="basis-1/2 text-left">
+      <p>
+        Twitter <a href="https://twitter.com/sp1986_tw" target="_blank">
+          @sp1986_tw
+        </a>
+      </p>
+      <p>
+        GitHub <a href="https://github.com/BruceShih" target="_blank">
+          @BruceShih
+        </a>
+      </p>
     </div>
   </div>
 </div>
