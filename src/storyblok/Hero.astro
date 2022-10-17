@@ -1,5 +1,7 @@
 ---
 import { storyblokEditable, renderRichText } from '@storyblok/astro';
+import IconGitHub from '~icons/tabler/brand-github';
+import IconTwitter from '~icons/tabler/brand-twitter';
 
 const { blok } = Astro.props;
 ---
@@ -13,7 +15,8 @@ const { blok } = Astro.props;
     </div>
     <div class="basis-1/2 text-left">
       <p>
-        Twitter <a
+        <IconTwitter />
+        <a
           href="https://twitter.com/sp1986_tw"
           class="link link-primary"
           target="_blank"
@@ -22,7 +25,8 @@ const { blok } = Astro.props;
         </a>
       </p>
       <p>
-        GitHub <a
+        <IconGitHub />
+        <a
           href="https://github.com/BruceShih"
           class="link link-primary"
           target="_blank"

@@ -1,7 +1,7 @@
 ---
 import { useStoryblokApi } from '@storyblok/astro';
 import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro';
-import DefaultLayout from '../layouts/DefaultLayout.astro';
+import IndexLayout from '../layouts/IndexLayout.astro';
 
 const { data } = await useStoryblokApi().get('cdn/stories/home', {
   version: import.meta.env.DEV ? 'draft' : 'published'
@@ -10,6 +10,6 @@ const { data } = await useStoryblokApi().get('cdn/stories/home', {
 const story = data.story;
 ---
 
-<DefaultLayout title="">
+<IndexLayout>
   <StoryblokComponent blok={story.content} />
-</DefaultLayout>
+</IndexLayout>
