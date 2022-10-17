@@ -4,8 +4,8 @@ import { storyblokEditable, renderRichText } from '@storyblok/astro';
 const { blok } = Astro.props;
 ---
 
-<div class="hero min-h-screen bg-base-200" {...storyblokEditable(blok)}>
-  <div class="hero-content flex-row gap-12">
+<div class="hero h-96 bg-base-200" {...storyblokEditable(blok)}>
+  <div class="hero-content flex-row p-8 gap-12">
     <div class="basis-1/2 text-right">
       <h1 class="text-5xl font-bold">{blok.title}</h1>
       <div class="py-6" set:html={renderRichText(blok.body)}></div>
@@ -13,12 +13,20 @@ const { blok } = Astro.props;
     </div>
     <div class="basis-1/2 text-left">
       <p>
-        Twitter <a href="https://twitter.com/sp1986_tw" target="_blank">
+        Twitter <a
+          href="https://twitter.com/sp1986_tw"
+          class="link link-primary"
+          target="_blank"
+        >
           @sp1986_tw
         </a>
       </p>
       <p>
-        GitHub <a href="https://github.com/BruceShih" target="_blank">
+        GitHub <a
+          href="https://github.com/BruceShih"
+          class="link link-primary"
+          target="_blank"
+        >
           @BruceShih
         </a>
       </p>

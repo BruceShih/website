@@ -42,7 +42,7 @@ const { data: posts } = await useStoryblokApi().get(
           {{ post.content.description }}
         </p>
         <div class="card-actions justify-end">
-          <a :href="post.full_slug" class="text-primary">Read More</a>
+          <a :href="post.full_slug" class="link link-primary">Read More</a>
         </div>
       </div>
     </div>
