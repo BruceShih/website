@@ -1,164 +1,95 @@
 {
-	"$schema" : "https://aka.ms/winget-packages.schema.2.0.json",
-	"CreationDate" : "2023-05-14T16:53:45.926-00:00",
-	"Sources" : 
-	[
-		{
-			"Packages" : 
-			[
-				{
-					"PackageIdentifier" : "File-New-Project.EarTrumpet"
-				},
-				{
-					"PackageIdentifier" : "7zip.7zip"
-				},
-				{
-					"PackageIdentifier" : "Shure.ShurePlusMOTIV"
-				},
-				{
-					"PackageIdentifier" : "ShareX.ShareX"
-				},
-				{
-					"PackageIdentifier" : "Discord.Discord"
-				},
-				{
-					"PackageIdentifier" : "Docker.DockerDesktop"
-				},
-				{
-					"PackageIdentifier" : "Git.Git"
-				},
-				{
-					"PackageIdentifier" : "Google.Chrome.Beta"
-				},
-				{
-					"PackageIdentifier" : "Gyan.FFmpeg"
-				},
-				{
-					"PackageIdentifier" : "LINE.LINE"
-				},
-				{
-					"PackageIdentifier" : "Logitech.CameraSettings"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.Edge"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.EdgeWebView2Runtime"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.WindowsTerminal"
-				},
-				{
-					"PackageIdentifier" : "OBSProject.OBSStudio"
-				},
-				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.OneDrive"
-				},
-				{
-					"PackageIdentifier" : "Postman.Postman"
-				},
-				{
-					"PackageIdentifier" : "Rainmeter.Rainmeter"
-				},
-				{
-					"PackageIdentifier" : "Spotify.Spotify"
-				},
-				{
-					"PackageIdentifier" : "Valve.Steam"
-				},
-				{
-					"PackageIdentifier" : "NZXT.CAM"
-				},
-				{
-					"PackageIdentifier" : "Notion.Notion"
-				},
-				{
-					"PackageIdentifier" : "Axosoft.GitKraken"
-				},
-				{
-					"PackageIdentifier" : "qBittorrent.qBittorrent"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "Python.Python.3.12"
-				},
-				{
-					"PackageIdentifier" : "RealVNC.VNCViewer"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x86"
-				},
-				{
-					"PackageIdentifier" : "Mojang.MinecraftLauncher"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.PowerShell"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.webpicmd"
-				},
-				{
-					"PackageIdentifier" : "Logitech.GHUB"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2015+.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VisualStudioCode"
-				},
-				{
-					"PackageIdentifier" : "Voicemod.Voicemod"
-				},
-				{
-					"PackageIdentifier" : "OpenJS.NodeJS"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.DotNet.SDK.7"
-				},
-				{
-					"PackageIdentifier" : "Logitech.LogiTune"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2013.x86"
-				},
-				{
-					"PackageIdentifier" : "VideoLAN.VLC"
-				},
-				{
-					"PackageIdentifier" : "Nvidia.PhysX"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.OpenJDK.17"
-				},
-				{
-					"PackageIdentifier" : "OpenVPNTechnologies.OpenVPN"
-				},
-				{
-					"PackageIdentifier" : "Yarn.Yarn"
-				},
-				{
-					"PackageIdentifier" : "Zoom.Zoom"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2010.x86"
-				},
-				{
-					"PackageIdentifier" : "Microsoft.VCRedist.2012.x64"
-				}
-			],
-			"SourceDetails" : 
-			{
-				"Argument" : "https://cdn.winget.microsoft.com/cache",
-				"Identifier" : "Microsoft.Winget.Source_8wekyb3d8bbwe",
-				"Name" : "winget",
-				"Type" : "Microsoft.PreIndexed.Package"
-			}
-		}
-	],
-	"WinGetVersion" : "1.5.101-preview"
+  "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+  "CreationDate": "2023-05-19T19:01:29.625-00:00",
+  "Sources": [
+    {
+      "Packages": [
+        {
+          "PackageIdentifier": "File-New-Project.EarTrumpet"
+        },
+        {
+          "PackageIdentifier": "7zip.7zip"
+        },
+        {
+          "PackageIdentifier": "Shure.ShurePlusMOTIV"
+        },
+        {
+          "PackageIdentifier": "ShareX.ShareX"
+        },
+        {
+          "PackageIdentifier": "Discord.Discord"
+        },
+        {
+          "PackageIdentifier": "Git.Git"
+        },
+        {
+          "PackageIdentifier": "LINE.LINE"
+        },
+        {
+          "PackageIdentifier": "Logitech.CameraSettings"
+        },
+        {
+          "PackageIdentifier": "Microsoft.WindowsTerminal"
+        },
+        {
+          "PackageIdentifier": "OBSProject.OBSStudio"
+        },
+        {
+          "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
+        },
+        {
+          "PackageIdentifier": "Valve.Steam"
+        },
+        {
+          "PackageIdentifier": "NZXT.CAM"
+        },
+        {
+          "PackageIdentifier": "Notion.Notion"
+        },
+        {
+          "PackageIdentifier": "Axosoft.GitKraken"
+        },
+        {
+          "PackageIdentifier": "Microsoft.PowerShell"
+        },
+        {
+          "PackageIdentifier": "Mojang.MinecraftLauncher"
+        },
+        {
+          "PackageIdentifier": "Logitech.GHUB"
+        },
+        {
+          "PackageIdentifier": "Microsoft.VisualStudioCode"
+        },
+        {
+          "PackageIdentifier": "Microsoft.OpenJDK.17"
+        },
+        {
+          "PackageIdentifier": "Microsoft.DotNet.SDK.7"
+        },
+        {
+          "PackageIdentifier": "Google.Chrome.Beta"
+        },
+        {
+          "PackageIdentifier": "Yarn.Yarn"
+        },
+        {
+          "PackageIdentifier": "VideoLAN.VLC"
+        },
+        {
+          "PackageIdentifier": "Zoom.Zoom"
+        },
+        {
+          "PackageIdentifier": "OpenJS.NodeJS"
+        }
+      ],
+      "SourceDetails": {
+        "Argument": "https://cdn.winget.microsoft.com/cache",
+        "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+        "Name": "winget",
+        "Type": "Microsoft.PreIndexed.Package"
+      }
+    }
+  ],
+  "WinGetVersion": "1.5.1081-preview"
 }
