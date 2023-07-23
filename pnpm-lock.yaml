@@ -25,9 +25,6 @@ devDependencies:
   '@unocss/nuxt':
     specifier: ^0.53.5
     version: 0.53.5(postcss@8.4.26)(vite@4.4.4)(webpack@5.88.2)
-  '@unocss/preset-icons':
-    specifier: ^0.53.5
-    version: 0.53.5
   nuxt:
     specifier: ^3.6.3
     version: 3.6.3(@types/node@18.16.19)
