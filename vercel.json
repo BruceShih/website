@@ -1,0 +1,5 @@
+{
+  "buildCommand": "nuxt build",
+  "devCommand": "nuxt dev",
+  "installCommand": "pnpm install"
+}
