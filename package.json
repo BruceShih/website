@@ -1,31 +1,25 @@
 {
-  "name": "@bruceshih/website",
-  "type": "module",
-  "version": "0.0.1",
+  "name": "website",
   "private": true,
   "scripts": {
-    "dev": "STORYBLOK_TOKEN=eufrQeuVNDQAcmsFcRyaGQtt astro dev",
-    "start": "STORYBLOK_TOKEN=eufrQeuVNDQAcmsFcRyaGQtt astro dev",
-    "build": "STORYBLOK_TOKEN=5Z3XSYp7EsnduqVKpG79gAtt astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/tailwind": "^2.0.2",
-    "@astrojs/vue": "^1.1.0",
-    "@storyblok/astro": "^1.1.0",
-    "astro": "^1.4.7",
-    "autoprefixer": "^10.4.12",
-    "axios": "^1.1.2",
-    "daisyui": "^2.31.0",
-    "tailwindcss": "^3.0.24",
-    "vue": "^3.2.30"
+    "build": "nuxt build",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "generate-sb-types": "storyblok-generate-ts source=./components.128781.json target=./component-types-sb"
   },
   "devDependencies": {
-    "@iconify-json/tabler": "^1.1.39",
-    "@tailwindcss/typography": "^0.5.7",
-    "@vitejs/plugin-basic-ssl": "^0.1.2",
-    "@vue/compiler-sfc": "^3.2.41",
-    "unplugin-icons": "^0.14.12"
+    "@iconify-json/lucide": "^1.1.111",
+    "@nuxt/devtools": "latest",
+    "@storyblok/nuxt": "^5.5.2",
+    "@types/node": "^18.16.19",
+    "@unocss/nuxt": "^0.53.5",
+    "@unocss/preset-icons": "^0.53.5",
+    "nuxt": "^3.6.3",
+    "storyblok-generate-ts": "^1.15.0"
+  },
+  "dependencies": {
+    "@anu-vue/nuxt": "^0.15.2"
   }
 }
