@@ -10,15 +10,16 @@
     "generate-sb-types": "storyblok-generate-ts source=./components.128781.json target=./component-types-sb"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.1.111",
+    "@iconify-json/lucide": "^1.1.114",
     "@nuxt/devtools": "latest",
     "@storyblok/nuxt": "^5.5.2",
-    "@types/node": "^18.16.19",
-    "@unocss/nuxt": "^0.53.5",
-    "nuxt": "^3.6.3",
-    "storyblok-generate-ts": "^1.15.0"
-  },
-  "dependencies": {
-    "@anu-vue/nuxt": "^0.15.2"
+    "@types/node": "^18.17.1",
+    "@unocss/nuxt": "^0.53.6",
+    "@unocss/preset-typography": "^0.54.1",
+    "@unocss/preset-web-fonts": "^0.54.1",
+    "daisyui": "^3.5.0",
+    "nuxt": "^3.6.5",
+    "storyblok-generate-ts": "^1.15.0",
+    "unocss-preset-daisy": "^6.0.0"
   }
 }

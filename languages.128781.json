@@ -1,0 +1,12 @@
+{
+  "languages": [
+    {
+      "code": "zh-tw",
+      "name": "Chinese (Taiwan)"
+    },
+    {
+      "code": "en",
+      "name": "English"
+    }
+  ]
+}

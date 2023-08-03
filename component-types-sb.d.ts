@@ -9,13 +9,6 @@ export interface RichtextStoryblok {
   [k: string]: any;
 }
 
-export interface AboutStoryblok {
-  body?: RichtextStoryblok;
-  _uid: string;
-  component: "about";
-  [k: string]: any;
-}
-
 export interface ArticleStoryblok {
   title?: string;
   description?: string;
@@ -23,6 +16,13 @@ export interface ArticleStoryblok {
   content?: RichtextStoryblok;
   _uid: string;
   component: "article";
+  [k: string]: any;
+}
+
+export interface ContentStoryblok {
+  title?: string;
+  _uid: string;
+  component: "content";
   [k: string]: any;
 }
 
