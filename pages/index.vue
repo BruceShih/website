@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const story = await useAsyncStoryblok('home', {
-  version: import.meta.env.PROD ? 'published' : 'draft'
-})
+import { useAsyncStoryblok } from '#imports'
+
+const story = await useAsyncStoryblok('home')
 </script>

@@ -2,9 +2,21 @@
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.NODE_ENV !== 'production' },
+  imports: {
+    autoImport: false
+  },
   modules: [
-    ['@storyblok/nuxt', { accessToken: process.env.STORYBLOK_TOKEN }],
+    '@vueuse/nuxt',
+    [
+      '@storyblok/nuxt',
+      {
+        accessToken: process.env.STORYBLOK_TOKEN,
+        apiOptions: {
+          version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
+        }
+      }
+    ],
     '@unocss/nuxt'
   ],
   vite: {

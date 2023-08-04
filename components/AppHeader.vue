@@ -1,12 +1,20 @@
 <template>
-  <header class="px-6 pt-6 flex justify-between items-center font-sans">
-    <div class="font-bold">Bruce's Blog</div>
-    <nav class="flex justify-end gap-4">
-      <NuxtLink to="/"> About </NuxtLink>
-      <NuxtLink to="/projects"> Projects </NuxtLink>
-      <NuxtLink to="/contact"> Contact </NuxtLink>
-    </nav>
-  </header>
+  <div class="navbar bg-base-100 font-sans">
+    <div class="flex-1">
+      <NuxtLink class="btn btn-ghost normal-case text-xl" to="/">
+        Bruce's Blog
+      </NuxtLink>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1">
+        <li><NuxtLink to="/"> About </NuxtLink></li>
+        <li>
+          <NuxtLink to="/blog"> Blog </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/contact"> Contact </NuxtLink>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
-
-<script setup lang="ts"></script>
