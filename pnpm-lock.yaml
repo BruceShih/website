@@ -26,6 +26,9 @@ devDependencies:
   '@unocss/preset-web-fonts':
     specifier: ^0.54.1
     version: 0.54.1
+  '@unocss/transformer-directives':
+    specifier: ^0.54.1
+    version: 0.54.1
   '@vueuse/components':
     specifier: ^10.3.0
     version: 10.3.0(vue@3.3.4)
@@ -1789,6 +1792,13 @@ packages:
     resolution: {integrity: sha512-tgG7ZOyLFRWB980BthwcDzKqe44JCyDMWGRzPsmPmNKVHZ86tDHibJOJYDgFu25PlPtJTzQpc3OA8Lw2xCCGKA==}
     dependencies:
       '@unocss/core': 0.53.6
+      css-tree: 2.3.1
+    dev: true
+
+  /@unocss/transformer-directives@0.54.1:
+    resolution: {integrity: sha512-nNltKSo5dTKcjgehPV0o6hD3dJzCixnmsaLNwTtB3w7GUsESn4tl4JnDv0PCPbiuVmZFwLZlFA4aYOfZ/AzLsQ==}
+    dependencies:
+      '@unocss/core': 0.54.1
       css-tree: 2.3.1
     dev: true
 

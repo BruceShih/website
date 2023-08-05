@@ -11,7 +11,7 @@
 
     <div class="card bg-base-300 shadow-xl">
       <div class="card-body">
-        <div v-html="content" class="prose"></div>
+        <div v-html="content" class="prose max-w-full "></div>
       </div>
     </div>
   </div>

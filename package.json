@@ -17,6 +17,7 @@
     "@unocss/nuxt": "^0.53.6",
     "@unocss/preset-typography": "^0.54.1",
     "@unocss/preset-web-fonts": "^0.54.1",
+    "@unocss/transformer-directives": "^0.54.1",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
     "@vueuse/nuxt": "^10.3.0",

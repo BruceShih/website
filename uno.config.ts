@@ -3,16 +3,26 @@ import {
   defineConfig,
   presetAttributify,
   presetTypography,
+  presetUno,
   presetWebFonts,
-  presetUno
+  transformerDirectives
 } from 'unocss'
 import { presetDaisy } from 'unocss-preset-daisy'
 
 export default defineConfig({
   presets: [
-    presetAttributify(),
     presetUno(),
-    presetTypography(),
+    presetAttributify(),
+    presetTypography({
+      cssExtend: {
+        code: {
+          color: '#8b5cf6'
+        },
+        'code::before, code::after': {
+          content: 'unset'
+        },
+      }
+    }),
     presetWebFonts({
       provider: 'google',
       fonts: {
@@ -25,5 +35,8 @@ export default defineConfig({
       utils: true,
       themes: ['light', 'dark']
     })
+  ],
+  transformers: [
+    transformerDirectives()
   ]
 })
