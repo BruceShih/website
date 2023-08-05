@@ -10,7 +10,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed, renderRichText } from '#imports'
 import { HeroStoryblok } from 'component-types-sb'
 
 const props = defineProps<{

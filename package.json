@@ -7,7 +7,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "generate-sb-types": "storyblok-generate-ts source=./components.128781.json target=./component-types-sb"
+    "generate-sb-types": "storyblok-generate-ts unknownAny=true strictIndexSignatures=true source=./components.128781.json target=./component-types-sb"
   },
   "devDependencies": {
     "@iconify-json/lucide": "^1.1.114",

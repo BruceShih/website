@@ -5,7 +5,9 @@
 </template>
 
 <script setup lang="ts">
-import { useAsyncStoryblok } from '#imports'
+import { HeroStoryblok } from 'component-types-sb';
 
-const story = await useAsyncStoryblok('home')
+const client = useTypedStoryblokApi<HeroStoryblok>()
+const response = await client.getStory('home')
+const story = response.data.story
 </script>
