@@ -3,13 +3,6 @@
   <div class="flex flex-col w-full">
     <template v-for="(story, index) in stories" :key="story.id">
       <div class="card flex-col md-flex-row bg-base-300 shadow-xl h-60">
-        <!-- <figure class="md-ma-0 md-rounded-s-4 md-rounded-e-0">
-          <img
-            class="w-60 h-60"
-            src="https://daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
-            alt="Album"
-          />
-        </figure> -->
         <div class="card-body">
           <h2 class="card-title">{{ story.content.title }}</h2>
           <p>{{ story.content.description }}</p>
@@ -17,7 +10,7 @@
             <span class="mr-4 text-base-content text-sm">
               <UseTimeAgo
                 v-slot="{ timeAgo }"
-                :time=" story.created_at ?? story.published_at"
+                :time=" story.created_at"
               >
                 {{ timeAgo }}
               </UseTimeAgo>
@@ -38,7 +31,7 @@ import { UseTimeAgo } from '@vueuse/components'
 import { ArticleStoryblok } from 'component-types-sb'
 
 const client = useTypedStoryblokApi<ArticleStoryblok>()
-const response = await client.getStories('', {
+const response = await client.getStories({
   starts_with: 'blog',
   sort_by: 'created_at:desc',
   page: 1,

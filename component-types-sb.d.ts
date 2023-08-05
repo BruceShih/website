@@ -11,7 +11,7 @@ export interface RichtextStoryblok {
 
 export interface ArticleStoryblok {
   title: string;
-  description: string;
+  description?: string;
   date: string;
   content: RichtextStoryblok;
   _uid: string;

@@ -1,11 +1,5 @@
 <template>
   <div v-editable="blok">
-    <!-- <img
-      v-if="blok.image?.filename"
-      :src="blok.image.filename + '/m/1600x0'"
-      :alt="blok.image.alt"
-      class="w-full object-cover"
-    /> -->
     <div class="flex flex-row justify-between items-center">
       <h1 class="text-2xl font-bold mb-4">
         {{ blok.title }}
@@ -16,9 +10,6 @@
     </div>
 
     <div class="card bg-base-300 shadow-xl">
-      <!-- <h2 class="text-xl font-bold mb-4">
-        {{ blok.description }}
-      </h2> -->
       <div class="card-body">
         <div v-html="content" class="prose"></div>
       </div>

@@ -1,25 +1,26 @@
 import {
+  ISbStoryData,
   ISbStory,
   ISbStories,
-  ISbStoriesParams,
-  ISbLinkURLObject
+  ISbLinkURLObject,
+  ISbStoriesParams
 } from 'storyblok-js-client'
 
 interface TStory<TStoryData>
-  extends Omit<ISbStory['data'], 'links' | 'rels' | 'stories'> {
+  extends Omit<ISbStory['data'], 'links' | 'rels' | 'story'> {
   data: {
-    links: (TStoryData | ISbLinkURLObject)[]
-    rels: TStoryData[]
-    story: TStoryData
+    links: (ISbStoryData | ISbLinkURLObject)[]
+    rels: ISbStoryData<TStoryData>[]
+    story: ISbStoryData<TStoryData>
   }
 }
 
 interface TStories<TStoryData>
   extends Omit<ISbStories['data'], 'links' | 'rels' | 'stories'> {
   data: {
-    links: (TStoryData | ISbLinkURLObject)[]
-    rels: TStoryData[]
-    stories: TStoryData[]
+    links: (ISbStoryData | ISbLinkURLObject)[]
+    rels: ISbStoryData<TStoryData>[]
+    stories: ISbStoryData<TStoryData>[]
   }
 }
 
@@ -31,10 +32,8 @@ export function useTypedStoryblokApi<S>() {
     return client.get(`${base}${url}`, params) as unknown as Promise<TStory<S>>
   }
 
-  const getStories = (url: string, params?: ISbStoriesParams) => {
-    return client.get(`${base}${url}`, params) as unknown as Promise<
-      TStories<S>
-    >
+  const getStories = (params: ISbStoriesParams) => {
+    return client.getStories(params) as unknown as Promise<TStories<S>>
   }
 
   return {
