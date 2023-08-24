@@ -7,12 +7,20 @@
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <li><NuxtLink to="/"> About </NuxtLink></li>
         <li>
-          <NuxtLink to="/blog"> Blog </NuxtLink>
+          <NuxtLink to="/">
+            About
+          </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/contact"> Contact </NuxtLink>
+          <NuxtLink to="/blog">
+            Blog
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/contact">
+            Contact
+          </NuxtLink>
         </li>
       </ul>
     </div>

@@ -1,9 +1,9 @@
-import {
-  ISbStoryData,
-  ISbStory,
-  ISbStories,
+import type {
   ISbLinkURLObject,
-  ISbStoriesParams
+  ISbStories,
+  ISbStoriesParams,
+  ISbStory,
+  ISbStoryData,
 } from 'storyblok-js-client'
 
 interface TStory<TStoryData>
@@ -38,6 +38,6 @@ export function useTypedStoryblokApi<S>() {
 
   return {
     getStory,
-    getStories
+    getStories,
   }
 }

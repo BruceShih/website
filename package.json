@@ -7,23 +7,30 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "generate-sb-types": "storyblok-generate-ts unknownAny=true strictIndexSignatures=true source=./components.128781.json target=./component-types-sb"
+    "generate-sb-types": "storyblok-generate-ts unknownAny=true strictIndexSignatures=true source=./components.128781.json target=./component-types-sb",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@iconify-json/lucide": "^1.1.114",
+    "@antfu/eslint-config": "^0.40.2",
+    "@iconify-json/lucide": "^1.1.118",
     "@nuxt/devtools": "latest",
-    "@storyblok/nuxt": "^5.5.2",
-    "@types/node": "^18.17.1",
+    "@nuxtjs/apollo": "5.0.0-alpha.6",
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@storyblok/nuxt": "^5.6.3",
+    "@types/node": "^18.17.5",
     "@unocss/nuxt": "^0.53.6",
-    "@unocss/preset-typography": "^0.54.1",
-    "@unocss/preset-web-fonts": "^0.54.1",
-    "@unocss/transformer-directives": "^0.54.1",
+    "@unocss/preset-typography": "^0.54.3",
+    "@unocss/preset-web-fonts": "^0.54.3",
+    "@unocss/transformer-directives": "^0.54.3",
     "@vueuse/components": "^10.3.0",
     "@vueuse/core": "^10.3.0",
     "@vueuse/nuxt": "^10.3.0",
-    "daisyui": "^3.5.0",
+    "daisyui": "^3.5.1",
+    "eslint": "^8.47.0",
     "nuxt": "^3.6.5",
     "storyblok-generate-ts": "^1.15.0",
-    "unocss-preset-daisy": "^6.0.0"
+    "unocss-preset-daisy": "^6.0.0",
+    "zod": "^3.21.4"
   }
 }

@@ -1,17 +1,15 @@
-<template>
-  <div class="px-4 md-px-10">
-    <StoryblokComponent
-      v-for="blok in props.blok.body"
-      :key="blok._uid"
-      :blok="blok"
-    />
-  </div>
-</template>
-
 <script setup lang="ts">
-import { PageStoryblok } from 'component-types-sb'
+import type { PageStoryblok } from 'component-types-sb'
 
 const props = defineProps<{
   blok: PageStoryblok
 }>()
 </script>
+
+<template>
+  <StoryblokComponent
+    v-for="block in props.blok.body"
+    :key="block._uid"
+    :blok="block"
+  />
+</template>
