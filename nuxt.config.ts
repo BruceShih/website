@@ -12,15 +12,15 @@ export default defineNuxtConfig({
       {
         accessToken: process.env.STORYBLOK_TOKEN,
         apiOptions: {
-          version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
-        },
-      },
+          version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
+        }
+      }
     ],
-    '@unocss/nuxt',
+    '@unocss/nuxt'
   ],
   vite: {
     optimizeDeps: {
-      exclude: ['fsevents'],
-    },
-  },
+      exclude: ['fsevents']
+    }
+  }
 })

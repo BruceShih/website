@@ -7,7 +7,7 @@ const response = await client.getStories({
   starts_with: 'blog',
   sort_by: 'created_at:desc',
   page: 1,
-  per_page: 10,
+  per_page: 10
 })
 const stories = response.data.stories
 </script>

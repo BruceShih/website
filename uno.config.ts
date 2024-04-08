@@ -6,7 +6,7 @@ import {
   presetTypography,
   presetUno,
   presetWebFonts,
-  transformerDirectives,
+  transformerDirectives
 } from 'unocss'
 import { presetDaisy } from 'unocss-preset-daisy'
 
@@ -18,27 +18,27 @@ export default defineConfig({
     presetTypography({
       cssExtend: {
         'code': {
-          color: '#8b5cf6',
+          color: '#8b5cf6'
         },
         'code::before, code::after': {
-          content: 'unset',
-        },
-      },
+          content: 'unset'
+        }
+      }
     }),
     presetWebFonts({
       provider: 'google',
       fonts: {
         sans: 'Poppins',
-        mono: ['Space Mono', 'Space Mono:400,700'],
-      },
+        mono: ['Space Mono', 'Space Mono:400,700']
+      }
     }),
     presetDaisy({
       base: true,
       utils: true,
-      themes: ['light', 'dark'],
-    }),
+      themes: ['light', 'dark']
+    })
   ],
   transformers: [
-    transformerDirectives(),
-  ],
+    transformerDirectives()
+  ]
 })

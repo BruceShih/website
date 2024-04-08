@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import type { ContentStoryblok } from 'component-types-sb'
 
-const props = defineProps<{
+defineProps<{
   blok: ContentStoryblok
 }>()
-
-const content = computed(() => props.blok.body)
 </script>
 
 <template>

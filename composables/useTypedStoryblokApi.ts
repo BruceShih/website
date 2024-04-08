@@ -3,7 +3,7 @@ import type {
   ISbStories,
   ISbStoriesParams,
   ISbStory,
-  ISbStoryData,
+  ISbStoryData
 } from 'storyblok-js-client'
 
 interface TStory<TStoryData>
@@ -38,6 +38,6 @@ export function useTypedStoryblokApi<S>() {
 
   return {
     getStory,
-    getStories,
+    getStories
   }
 }
