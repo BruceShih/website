@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { UseTimeAgo } from '@vueuse/components'
-import type { ArticleStoryblok } from 'component-types-sb'
+import type { ArticleStoryblok } from '~/component-types-sb'
 
 const client = useTypedStoryblokApi<ArticleStoryblok>()
 const response = await client.getStories({

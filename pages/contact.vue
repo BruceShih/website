@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ContentStoryblok } from 'component-types-sb'
+import type { ContentStoryblok } from '~/component-types-sb'
 
 const client = useTypedStoryblokApi<ContentStoryblok>()
 const response = await client.getStory('contact')
