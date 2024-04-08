@@ -1,5 +1,6 @@
 {
   "name": "website",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -27,7 +28,7 @@
     "@vueuse/core": "^10.3.0",
     "@vueuse/nuxt": "^10.3.0",
     "daisyui": "^3.6.1",
-    "eslint": "^8.47.0",
+    "eslint": "^9.0.0",
     "nuxt": "^3.6.5",
     "storyblok-generate-ts": "^1.15.1",
     "unocss-preset-daisy": "^6.0.0",
