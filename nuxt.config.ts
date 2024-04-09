@@ -25,5 +25,8 @@ export default defineNuxtConfig({
     optimizeDeps: {
       exclude: ['fsevents']
     }
+  },
+  nitro: {
+    preset: 'vercel-edge'
   }
 })
