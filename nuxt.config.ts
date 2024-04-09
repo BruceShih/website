@@ -14,7 +14,7 @@ export default defineNuxtConfig({
     [
       '@storyblok/nuxt',
       {
-        accessToken: process.env.STORYBLOK_TOKEN,
+        accessToken: process.env.NUXT_STORYBLOK_TOKEN,
         apiOptions: {
           version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
         }
