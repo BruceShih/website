@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
-import type { HorizontalNavigationLink, Link } from '#ui/types'
+import type { HorizontalNavigationLink } from '#ui/types'
 
 const open = ref(false)
 const target = ref(null)

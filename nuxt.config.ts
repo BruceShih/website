@@ -20,13 +20,5 @@ export default defineNuxtConfig({
   ],
   ui: {
     icons: ['lucide']
-  },
-  vite: {
-    optimizeDeps: {
-      exclude: ['fsevents']
-    }
-  },
-  nitro: {
-    preset: 'vercel-edge'
   }
 })
