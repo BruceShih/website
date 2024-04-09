@@ -16,8 +16,11 @@ export default defineNuxtConfig({
         }
       }
     ],
-    '@unocss/nuxt'
+    '@nuxt/ui'
   ],
+  ui: {
+    icons: ['lucide']
+  },
   vite: {
     optimizeDeps: {
       exclude: ['fsevents']

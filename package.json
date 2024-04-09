@@ -16,22 +16,17 @@
     "@bruceshih/eslint-config-vue": "^1.1.1",
     "@iconify-json/lucide": "^1.1.180",
     "@nuxt/devtools": "latest",
+    "@nuxt/ui": "^2.15.1",
     "@nuxtjs/apollo": "5.0.0-alpha.14",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@storyblok/nuxt": "^6.0.6",
     "@types/node": "^18.19.30",
-    "@unocss/nuxt": "^0.59.0",
-    "@unocss/preset-typography": "^0.59.0",
-    "@unocss/preset-web-fonts": "^0.59.0",
-    "@unocss/transformer-directives": "^0.59.0",
     "@vueuse/components": "^10.9.0",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
-    "daisyui": "^3.9.4",
     "eslint": "^9.0.0",
     "nuxt": "^3.11.2",
     "storyblok-generate-ts": "^2.0.2",
-    "unocss-preset-daisy": "^7.0.0",
     "zod": "^3.22.4"
   }
 }

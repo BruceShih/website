@@ -7,7 +7,7 @@ const story = response.data.story
 </script>
 
 <template>
-  <section>
+  <UContainer>
     <StoryblokComponent v-if="story" :blok="story.content" />
-  </section>
+  </UContainer>
 </template>

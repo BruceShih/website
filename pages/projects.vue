@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-2xl font-bold">
-    Projects page
-  </h1>
+  <UContainer>
+    <h1 class="text-3xl font-bold">
+      Projects
+    </h1>
+  </UContainer>
 </template>
