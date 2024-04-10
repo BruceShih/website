@@ -4,6 +4,12 @@ import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
+  devServer: {
+    https: {
+      key: './localhost-key.pem',
+      cert: './localhost.pem'
+    }
+  },
   routeRules: {
     // prerender index route by default otherwise vercel will give you 500
     '/': { prerender: true }
