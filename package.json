@@ -13,20 +13,20 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@bruceshih/eslint-config-vue": "^1.1.1",
+    "@bruceshih/eslint-config-vue": "^1.2.0",
     "@iconify-json/lucide": "^1.1.180",
     "@nuxt/devtools": "latest",
     "@nuxt/ui": "^2.15.1",
     "@nuxtjs/apollo": "5.0.0-alpha.14",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@storyblok/nuxt": "^6.0.6",
-    "@types/node": "^18.19.30",
+    "@types/node": "^18.19.31",
     "@vueuse/components": "^10.9.0",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
     "eslint": "^9.0.0",
     "nuxt": "^3.11.2",
-    "storyblok-generate-ts": "^2.0.2",
+    "storyblok-generate-ts": "^2.1.0",
     "zod": "^3.22.4"
   }
 }
