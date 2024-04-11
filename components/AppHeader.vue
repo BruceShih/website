@@ -30,7 +30,7 @@ const links: HorizontalNavigationLink[] = [{
 
 const socialLinks = [{
   icon: 'i-lucide-twitter',
-  to: 'https://twitter.com/bruce'
+  to: 'https://twitter.com/bruceshihtw'
 }, {
   icon: 'i-lucide-github',
   to: 'https://github.com/BruceShih'
