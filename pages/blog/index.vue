@@ -9,7 +9,7 @@ const response = await client.getStories({
   page: 1,
   per_page: 10
 })
-const stories = response.data.stories
+const stories = useState<typeof response.data.stories>('blogs', () => response.data.stories)
 </script>
 
 <template>
@@ -17,15 +17,23 @@ const stories = response.data.stories
     <h1 class="text-3xl font-bold">
       Blog
     </h1>
-    <div class="flex flex-col w-full py-6">
+    <div class="py-6">
       <template v-for="(story, index) in stories" :key="story.id">
-        <div class="card flex-col md-flex-row bg-base-300 shadow-xl h-60">
-          <div class="card-body">
-            <h2 class="card-title">
+        <UCard>
+          <template #header>
+            <h2 class="text-xl">
               {{ story.content.title }}
             </h2>
-            <p>{{ story.content.description }}</p>
-            <div class="card-actions justify-end items-center">
+          </template>
+
+          <p class="text-primary flex justify-end">
+            <NuxtLink v-if="story.full_slug" :to="story.full_slug">
+              ...Keep reading
+            </NuxtLink>
+          </p>
+
+          <template #footer>
+            <div class="flex justify-between">
               <span class="mr-4 text-base-content text-sm">
                 <UseTimeAgo
                   v-slot="{ timeAgo }"
@@ -34,13 +42,10 @@ const stories = response.data.stories
                   {{ timeAgo }}
                 </UseTimeAgo>
               </span>
-              <NuxtLink v-if="story.full_slug" :to="story.full_slug">
-                More
-              </NuxtLink>
             </div>
-          </div>
-        </div>
-        <div v-if="index !== stories.length - 1" class="divider" />
+          </template>
+        </UCard>
+        <UDivider v-if="index !== stories.length - 1" type="solid" />
       </template>
     </div>
   </UContainer>
