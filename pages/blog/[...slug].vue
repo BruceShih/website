@@ -4,9 +4,11 @@ import type { ArticleStoryblok } from '~/component-types-sb'
 const { path } = useRoute()
 const client = useTypedStoryblokApi<ArticleStoryblok>()
 const response = await client.getStory(path)
-const story = response.data.story
+const story = useState<typeof response.data.story>('blog', () => response.data.story)
 </script>
 
 <template>
-  <StoryblokComponent v-if="story" :blok="story.content" />
+  <UContainer>
+    <StoryblokComponent v-if="story" :blok="story.content" />
+  </UContainer>
 </template>
