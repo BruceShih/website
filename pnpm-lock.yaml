@@ -12,23 +12,23 @@ importers:
         specifier: ^3.11.2
         version: 3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.11)(@unocss/reset@0.60.0)(encoding@0.1.13)(eslint@9.2.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.27(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(terser@5.31.0)(typescript@5.4.5)(unocss@0.60.0(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0))
       vue:
-        specifier: ^3.4.21
+        specifier: ^3.4.27
         version: 3.4.27(typescript@5.4.5)
       vue-router:
-        specifier: ^4.3.0
+        specifier: ^4.3.2
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
     devDependencies:
       '@bruceshih/eslint-config-vue':
-        specifier: ^1.2.0
-        version: 1.4.0(@antfu/eslint-config@2.17.0(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)(typescript@5.4.5))(eslint-flat-config-utils@0.2.4)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)
+        specifier: ^1.5.0
+        version: 1.5.0(@antfu/eslint-config@2.17.0(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)(typescript@5.4.5))(eslint-flat-config-utils@0.2.4)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)
       '@iconify-json/lucide':
-        specifier: ^1.1.180
+        specifier: ^1.1.187
         version: 1.1.187
       '@nuxt/image':
         specifier: ^1.7.0
         version: 1.7.0(ioredis@5.4.1)(rollup@4.17.2)
       '@nuxt/ui':
-        specifier: ^2.15.1
+        specifier: ^2.16.0
         version: 2.16.0(focus-trap@7.5.4)(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.11)(@unocss/reset@0.60.0)(encoding@0.1.13)(eslint@9.2.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.27(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(terser@5.31.0)(typescript@5.4.5)(unocss@0.60.0(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0)))(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0))(vue@3.4.27(typescript@5.4.5))
       '@nuxtjs/apollo':
         specifier: 5.0.0-alpha.14
@@ -37,7 +37,7 @@ importers:
         specifier: ^4.1.0
         version: 4.1.0(eslint@9.2.0)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0))(webpack@5.91.0(esbuild@0.17.19))
       '@storyblok/nuxt':
-        specifier: ^6.0.6
+        specifier: ^6.0.10
         version: 6.0.10
       '@vueuse/components':
         specifier: ^10.9.0
@@ -49,13 +49,13 @@ importers:
         specifier: ^10.9.0
         version: 10.9.0(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.11)(@unocss/reset@0.60.0)(encoding@0.1.13)(eslint@9.2.0)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.17.2))(vue@3.4.27(typescript@5.4.5)))(fuse.js@6.6.2)(ioredis@5.4.1)(optionator@0.9.4)(rollup@4.17.2)(terser@5.31.0)(typescript@5.4.5)(unocss@0.60.0(postcss@8.4.38)(rollup@4.17.2)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0)))(rollup@4.17.2)(vue@3.4.27(typescript@5.4.5))
       eslint:
-        specifier: ^9.0.0
+        specifier: ^9.2.0
         version: 9.2.0
       storyblok-generate-ts:
         specifier: ^2.1.0
         version: 2.1.0(postcss@8.4.38)(typescript@5.4.5)
       zod:
-        specifier: ^3.22.4
+        specifier: ^3.23.8
         version: 3.23.8
 
 packages:
@@ -326,8 +326,8 @@ packages:
     resolution: {integrity: sha512-E/jKbPoca1tfUPj3iSbitDZTGnq6FUFjkH6L8U2oDwSuwK1WhnnVtCG7oFOTg/DDnyoXbQYUiUiGOibHqaGVnw==}
     engines: {node: '>= 16'}
 
-  '@bruceshih/eslint-config-vue@1.4.0':
-    resolution: {integrity: sha512-h7gTxwpqGdvHCg4+e4edRU3q5YmScLJ9g7K6/hpqhvlPDGzCJucKKTfCUvH/RoR0rNWiX/9gExE4jat5ZDb7sA==}
+  '@bruceshih/eslint-config-vue@1.5.0':
+    resolution: {integrity: sha512-kM1EuisYvFknXvDrfwKlJhUizgSGUrXBLkNL8jV6G8z45sfq6zM49lcJwGnEdvJHXYLav3GP4EtRISMtyxgvGA==}
     peerDependencies:
       '@antfu/eslint-config': ^2.15.0
       eslint: ^9.0.0
@@ -1307,31 +1307,31 @@ packages:
   '@storyblok/vue@8.0.8':
     resolution: {integrity: sha512-ReYbMVeekQpj6wNE4V/ac2u59YYxsENrtWGmyMwWiqohTOm4106tznMbzWmVJgEwO8N2eXhIkg1MZ7FlADqAlw==}
 
-  '@stylistic/eslint-plugin-js@2.0.0':
-    resolution: {integrity: sha512-yQZKvygpWZ5rlIyzdQzmJbT4RwK2bfYn+QCey+WUy6XdgLQ0RHXSFT1ezBZyxWKbNRfoVbbNfs1BqyEDIkXX3A==}
+  '@stylistic/eslint-plugin-js@2.1.0':
+    resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@stylistic/eslint-plugin-jsx@2.0.0':
-    resolution: {integrity: sha512-XwsqawXfCvFdU8iu217xfiVIDXq3xF6zRpmGTrgmnXP/FxBcY9shDz9sZYGwNzEgiBeS14nL1vRuO9NWkYutoA==}
+  '@stylistic/eslint-plugin-jsx@2.1.0':
+    resolution: {integrity: sha512-mMD7S+IndZo2vxmwpHVTCwx2O1VdtE5tmpeNwgaEcXODzWV1WTWpnsc/PECQKIr/mkLPFWiSIqcuYNhQ/3l6AQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@stylistic/eslint-plugin-plus@2.0.0':
-    resolution: {integrity: sha512-iif+oS6SaAIG9yN3zynNWT2YqP/vq1Os5sgIKocinkjZvbTBdNygq7OoxO+V2PTwx/KwF0z6IXU5OdxwdEizkg==}
+  '@stylistic/eslint-plugin-plus@2.1.0':
+    resolution: {integrity: sha512-S5QAlgYXESJaSBFhBSBLZy9o36gXrXQwWSt6QkO+F0SrT9vpV5JF/VKoh+ojO7tHzd8Ckmyouq02TT9Sv2B0zQ==}
     peerDependencies:
       eslint: '*'
 
-  '@stylistic/eslint-plugin-ts@2.0.0':
-    resolution: {integrity: sha512-Rsk9XLR+Edv7TNh20Z+pfFA+T6pjPidbK1JYk6UIxc5iVW5Po6E/NOnO0UKD++uWT3XIDsC0LkHUxfKPoXf9TQ==}
+  '@stylistic/eslint-plugin-ts@2.1.0':
+    resolution: {integrity: sha512-2ioFibufHYBALx2TBrU4KXovCkN8qCqcb9yIHc0fyOfTaO5jw4d56WW7YRcF3Zgde6qFyXwAN6z/+w4pnmos1g==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
 
-  '@stylistic/eslint-plugin@2.0.0':
-    resolution: {integrity: sha512-M3j82FavnsI5Wm8+C2MHqUBijKEVfXmKci3YVaIpKaB9SSY5lJn1+Yh5zk8AqV+qH3qOSJJeFCTyIiQpghxBiA==}
+  '@stylistic/eslint-plugin@2.1.0':
+    resolution: {integrity: sha512-cBBowKP2u/+uE5CzgH5w8pE9VKqcM7BXdIDPIbGt2rmLJGnA6MJPr9vYGaqgMoJFs7R/FzsMQerMvvEP40g2uw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -5025,8 +5025,8 @@ packages:
   svg-tags@1.0.0:
     resolution: {integrity: sha512-ovssysQTa+luh7A5Weu3Rta6FJlFBBbInjOh722LIt6klpU2/HtdUbszju/G4devcvk8PGt7FCLv5wftu3THUA==}
 
-  svgo@3.3.1:
-    resolution: {integrity: sha512-xQQTIGRl3gHTO2PFlZFLl+Xwofj+CMOPitfoByGBNAniQnY6SbGgd31u3C8RTqdlqZqYNl9Sb83VXbimVHcU6w==}
+  svgo@3.3.2:
+    resolution: {integrity: sha512-OoohrmuUlBs8B8o6MB2Aevn+pRIH9zDALSR+6hhqVfa6fRwG/Qw9VUMSMW9VNg2CFc/MTIfabtdOVl9ODIJjpw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -5535,8 +5535,8 @@ packages:
   vscode-uri@3.0.8:
     resolution: {integrity: sha512-AyFQ0EVmsOZOlAnxoFOGOq1SQDWAB7C6aqMGS23svWAllfOaxbuFvcT8D1i8z3Gyn8fraVeZNNmN6e9bxxXkKw==}
 
-  vue-bundle-renderer@2.0.0:
-    resolution: {integrity: sha512-oYATTQyh8XVkUWe2kaKxhxKVuuzK2Qcehe+yr3bGiaQAhK3ry2kYE4FWOfL+KO3hVFwCdLmzDQTzYhTi9C+R2A==}
+  vue-bundle-renderer@2.1.0:
+    resolution: {integrity: sha512-uZ+5ZJdZ/b43gMblWtcpikY6spJd0nERaM/1RtgioXNfWFbjKlUwrS8HlrddN6T2xtptmOouWclxLUkpgcVX3Q==}
 
   vue-demi@0.14.7:
     resolution: {integrity: sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==}
@@ -5749,7 +5749,7 @@ snapshots:
     dependencies:
       '@antfu/install-pkg': 0.3.3
       '@clack/prompts': 0.7.0
-      '@stylistic/eslint-plugin': 2.0.0(eslint@9.2.0)(typescript@5.4.5)
+      '@stylistic/eslint-plugin': 2.1.0(eslint@9.2.0)(typescript@5.4.5)
       '@typescript-eslint/eslint-plugin': 7.8.0(@typescript-eslint/parser@7.8.0(eslint@9.2.0)(typescript@5.4.5))(eslint@9.2.0)(typescript@5.4.5)
       '@typescript-eslint/parser': 7.8.0(eslint@9.2.0)(typescript@5.4.5)
       eslint: 9.2.0
@@ -6061,7 +6061,7 @@ snapshots:
       call-me-maybe: 1.0.2
       js-yaml: 4.1.0
 
-  '@bruceshih/eslint-config-vue@1.4.0(@antfu/eslint-config@2.17.0(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)(typescript@5.4.5))(eslint-flat-config-utils@0.2.4)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)':
+  '@bruceshih/eslint-config-vue@1.5.0(@antfu/eslint-config@2.17.0(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)(typescript@5.4.5))(eslint-flat-config-utils@0.2.4)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)':
     dependencies:
       '@antfu/eslint-config': 2.17.0(@vue/compiler-sfc@3.4.27)(eslint-plugin-format@0.1.1(eslint@9.2.0))(eslint@9.2.0)(typescript@5.4.5)
       eslint: 9.2.0
@@ -6820,7 +6820,7 @@ snapshots:
       vite-node: 1.6.0(@types/node@20.12.11)(terser@5.31.0)
       vite-plugin-checker: 0.6.4(eslint@9.2.0)(optionator@0.9.4)(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.11)(terser@5.31.0))
       vue: 3.4.27(typescript@5.4.5)
-      vue-bundle-renderer: 2.0.0
+      vue-bundle-renderer: 2.1.0
     transitivePeerDependencies:
       - '@types/node'
       - eslint
@@ -7235,7 +7235,7 @@ snapshots:
     dependencies:
       '@storyblok/js': 3.0.8
 
-  '@stylistic/eslint-plugin-js@2.0.0(eslint@9.2.0)':
+  '@stylistic/eslint-plugin-js@2.1.0(eslint@9.2.0)':
     dependencies:
       '@types/eslint': 8.56.10
       acorn: 8.11.3
@@ -7243,15 +7243,15 @@ snapshots:
       eslint-visitor-keys: 4.0.0
       espree: 10.0.1
 
-  '@stylistic/eslint-plugin-jsx@2.0.0(eslint@9.2.0)':
+  '@stylistic/eslint-plugin-jsx@2.1.0(eslint@9.2.0)':
     dependencies:
-      '@stylistic/eslint-plugin-js': 2.0.0(eslint@9.2.0)
+      '@stylistic/eslint-plugin-js': 2.1.0(eslint@9.2.0)
       '@types/eslint': 8.56.10
       eslint: 9.2.0
       estraverse: 5.3.0
       picomatch: 4.0.2
 
-  '@stylistic/eslint-plugin-plus@2.0.0(eslint@9.2.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin-plus@2.1.0(eslint@9.2.0)(typescript@5.4.5)':
     dependencies:
       '@types/eslint': 8.56.10
       '@typescript-eslint/utils': 7.8.0(eslint@9.2.0)(typescript@5.4.5)
@@ -7260,9 +7260,9 @@ snapshots:
       - supports-color
       - typescript
 
-  '@stylistic/eslint-plugin-ts@2.0.0(eslint@9.2.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin-ts@2.1.0(eslint@9.2.0)(typescript@5.4.5)':
     dependencies:
-      '@stylistic/eslint-plugin-js': 2.0.0(eslint@9.2.0)
+      '@stylistic/eslint-plugin-js': 2.1.0(eslint@9.2.0)
       '@types/eslint': 8.56.10
       '@typescript-eslint/utils': 7.8.0(eslint@9.2.0)(typescript@5.4.5)
       eslint: 9.2.0
@@ -7270,12 +7270,12 @@ snapshots:
       - supports-color
       - typescript
 
-  '@stylistic/eslint-plugin@2.0.0(eslint@9.2.0)(typescript@5.4.5)':
+  '@stylistic/eslint-plugin@2.1.0(eslint@9.2.0)(typescript@5.4.5)':
     dependencies:
-      '@stylistic/eslint-plugin-js': 2.0.0(eslint@9.2.0)
-      '@stylistic/eslint-plugin-jsx': 2.0.0(eslint@9.2.0)
-      '@stylistic/eslint-plugin-plus': 2.0.0(eslint@9.2.0)(typescript@5.4.5)
-      '@stylistic/eslint-plugin-ts': 2.0.0(eslint@9.2.0)(typescript@5.4.5)
+      '@stylistic/eslint-plugin-js': 2.1.0(eslint@9.2.0)
+      '@stylistic/eslint-plugin-jsx': 2.1.0(eslint@9.2.0)
+      '@stylistic/eslint-plugin-plus': 2.1.0(eslint@9.2.0)(typescript@5.4.5)
+      '@stylistic/eslint-plugin-ts': 2.1.0(eslint@9.2.0)(typescript@5.4.5)
       '@types/eslint': 8.56.10
       eslint: 9.2.0
     transitivePeerDependencies:
@@ -9695,7 +9695,7 @@ snapshots:
       ofetch: 1.3.4
       pathe: 1.1.2
       sharp: 0.32.6
-      svgo: 3.3.1
+      svgo: 3.3.2
       ufo: 1.5.3
       unstorage: 1.10.2(ioredis@5.4.1)
       xss: 1.0.15
@@ -10582,7 +10582,7 @@ snapshots:
       unstorage: 1.10.2(ioredis@5.4.1)
       untyped: 1.4.2
       vue: 3.4.27(typescript@5.4.5)
-      vue-bundle-renderer: 2.0.0
+      vue-bundle-renderer: 2.1.0
       vue-devtools-stub: 0.1.0
       vue-router: 4.3.2(vue@3.4.27(typescript@5.4.5))
     optionalDependencies:
@@ -11058,7 +11058,7 @@ snapshots:
     dependencies:
       postcss: 8.4.38
       postcss-value-parser: 4.2.0
-      svgo: 3.3.1
+      svgo: 3.3.2
 
   postcss-unique-selectors@6.0.4(postcss@8.4.38):
     dependencies:
@@ -11640,7 +11640,7 @@ snapshots:
 
   svg-tags@1.0.0: {}
 
-  svgo@3.3.1:
+  svgo@3.3.2:
     dependencies:
       '@trysound/sax': 0.2.0
       commander: 7.2.0
@@ -12227,7 +12227,7 @@ snapshots:
 
   vscode-uri@3.0.8: {}
 
-  vue-bundle-renderer@2.0.0:
+  vue-bundle-renderer@2.1.0:
     dependencies:
       ufo: 1.5.3
 
