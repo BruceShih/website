@@ -25,7 +25,8 @@ export default defineNuxtConfig({
         }
       }
     ],
-    '@nuxt/ui'
+    '@nuxt/ui',
+    '@nuxt/image'
   ],
   ui: {
     icons: ['lucide']

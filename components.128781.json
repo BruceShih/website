@@ -101,6 +101,47 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null
+    },
+    {
+      "name": "project",
+      "display_name": null,
+      "created_at": "2024-05-02T16:00:27.647Z",
+      "updated_at": "2024-05-09T09:16:57.203Z",
+      "id": 5743212,
+      "schema": {
+        "title": {
+          "type": "text"
+        },
+        "preview": {
+          "type": "asset",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "description": {
+          "type": "text"
+        },
+        "link": {
+          "type": "multilink"
+        },
+        "repository": {
+          "type": "multilink"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "project",
+      "component_group_uuid": null,
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null
     }
   ]
 }
