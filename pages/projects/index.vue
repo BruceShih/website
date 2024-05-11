@@ -18,12 +18,12 @@ const stories = useState<typeof response.data.stories>('projects', () => respons
     </h1>
     <div class="py-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
       <template v-for="story in stories" :key="story.id">
-        <UCard class="relative z-0 h-40 overflow-hidden">
+        <UCard class="relative h-40 overflow-hidden -z-10">
           <NuxtImg
             v-if="story.content.preview?.filename"
             :src="story.content.preview?.filename"
             :alt="`Preview of ${story.content.title}`"
-            class="preview-image absolute -top-5 right-0 -z-10 w-3/5 opacity-50"
+            class="preview-image absolute -top-5 right-0 w-3/5 opacity-50"
           />
           <h2 class="text-xl mb-2 px-2">
             <ULink
