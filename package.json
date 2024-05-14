@@ -24,6 +24,7 @@
     "@nuxt/ui": "^2.16.0",
     "@nuxtjs/apollo": "5.0.0-alpha.14",
     "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/seo": "2.0.0-rc.10",
     "@storyblok/nuxt": "^6.0.10",
     "@vueuse/components": "^10.9.0",
     "@vueuse/core": "^10.9.0",
