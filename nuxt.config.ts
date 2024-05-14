@@ -25,9 +25,25 @@ export default defineNuxtConfig({
       }
     ],
     '@nuxt/ui',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/seo'
   ],
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+      templateParams: {
+        separator: '-'
+      },
+      titleTemplate: '%pageTitle %separator %siteName'
+    }
+  },
   ui: {
     icons: ['lucide']
+  },
+  site: {
+    url: 'https://bruceshih.me',
+    name: 'Website of Bruce Shih',
+    description: 'I\'m Bruce SpeechSynthesis, I make websites'
   }
 })

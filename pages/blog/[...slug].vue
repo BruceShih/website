@@ -5,6 +5,10 @@ const { path } = useRoute()
 const client = useTypedStoryblokApi<ArticleStoryblok>()
 const response = await client.getStory(path)
 const story = useState<typeof response.data.story>('blog', () => response.data.story)
+
+useHead({
+  title: story.value.content.title
+})
 </script>
 
 <template>

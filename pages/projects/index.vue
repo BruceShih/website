@@ -9,6 +9,10 @@ const response = await client.getStories({
   per_page: 10
 })
 const stories = useState<typeof response.data.stories>('projects', () => response.data.stories)
+
+useHead({
+  title: 'Projects'
+})
 </script>
 
 <template>

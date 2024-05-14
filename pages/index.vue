@@ -4,6 +4,10 @@ import type { HeroStoryblok } from '~/component-types-sb'
 const client = useTypedStoryblokApi<HeroStoryblok>()
 const response = await client.getStory('home')
 const story = response.data.story
+
+useHead({
+  title: 'Home'
+})
 </script>
 
 <template>
