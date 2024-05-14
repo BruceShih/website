@@ -2,6 +2,9 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
+  experimental: {
+    viewTransition: true
+  },
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
   devServer: {
     https: {
