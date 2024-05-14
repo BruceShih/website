@@ -18,7 +18,7 @@
     "vue-router": "^4.3.2"
   },
   "devDependencies": {
-    "@bruceshih/eslint-config-vue": "^1.5.0",
+    "@bruceshih/eslint-config-vue": "^1.6.0",
     "@iconify-json/lucide": "^1.1.187",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.16.0",
