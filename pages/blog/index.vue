@@ -40,14 +40,6 @@ function getFirstParagraph(story: typeof response.data.stories[0]) {
           {{ getFirstParagraph(story) }}
         </p>
         <div class="flex justify-between">
-          <span class="mr-4 text-base-content text-sm">
-            <UseTimeAgo
-              v-slot="{ timeAgo }"
-              :time=" story.created_at"
-            >
-              {{ timeAgo }}
-            </UseTimeAgo>
-          </span>
           <ULink
             v-if="story.full_slug"
             class="text-sm"
@@ -57,6 +49,14 @@ function getFirstParagraph(story: typeof response.data.stories[0]) {
           >
             ...Keep reading
           </ULink>
+          <span class="mr-4 text-base-content text-sm">
+            <UseTimeAgo
+              v-slot="{ timeAgo }"
+              :time=" story.created_at"
+            >
+              {{ timeAgo }}
+            </UseTimeAgo>
+          </span>
         </div>
         <UDivider v-if="index !== stories.length - 1" type="solid" />
       </template>
