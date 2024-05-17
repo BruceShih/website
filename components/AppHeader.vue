@@ -9,34 +9,42 @@ defineShortcuts({
   o: () => open.value = !open.value
 })
 
+const links: HorizontalNavigationLink[] = reactive([
+  {
+    label: 'About',
+    to: '/'
+  },
+  // {
+  //   label: 'Blog',
+  //   to: '/blog'
+  // },
+  {
+    label: 'Projects',
+    to: '/projects'
+  },
+  {
+    label: 'Contact',
+    to: '/contact'
+  }
+])
+
+const socialLinks = reactive([
+  {
+    icon: 'i-lucide-twitter',
+    to: 'https://twitter.com/bruceshihtw'
+  },
+  {
+    icon: 'i-lucide-github',
+    to: 'https://github.com/BruceShih'
+  }
+])
+
+const verticalLinks = reactive([links])
+
 onClickOutside(target, () => {
   if (open.value)
     open.value = false
 })
-
-const links: HorizontalNavigationLink[] = [{
-  label: 'About',
-  to: '/'
-}, {
-  label: 'Blog',
-  to: '/blog'
-}, {
-  label: 'Projects',
-  to: '/projects'
-}, {
-  label: 'Contact',
-  to: '/contact'
-}]
-
-const socialLinks = [{
-  icon: 'i-lucide-twitter',
-  to: 'https://twitter.com/bruceshihtw'
-}, {
-  icon: 'i-lucide-github',
-  to: 'https://github.com/BruceShih'
-}]
-
-const verticalLinks = [links]
 </script>
 
 <template>

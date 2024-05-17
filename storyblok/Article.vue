@@ -9,17 +9,13 @@ const content = computed(() => renderRichText(props.blok.content))
 </script>
 
 <template>
-  <UCard>
-    <template #header>
-      <h2 class="text-xl">
-        {{ blok.title }}
-      </h2>
-    </template>
-
-    <p v-html="content" />
-
-    <template #footer>
-      {{ blok.date }}
-    </template>
-  </UCard>
+  <h2 class="text-xl mb-2">
+    {{ blok.title }}
+  </h2>
+  <p class="mb-4" v-html="content" />
+  <div class="flex justify-end">
+    <span class="mr-4 text-base-content text-sm">
+      {{ new Date(blok.date).toDateString() }}
+    </span>
+  </div>
 </template>
