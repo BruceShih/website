@@ -9,15 +9,19 @@ defineShortcuts({
   o: () => open.value = !open.value
 })
 
-const links: HorizontalNavigationLink[] = reactive([
+const route = useRoute()
+const isRouteBlog = computed(() => route.name === 'blog' || route.name === 'blog-slug')
+
+const links = reactive<HorizontalNavigationLink[]>([
   {
     label: 'About',
     to: '/'
   },
-  // {
-  //   label: 'Blog',
-  //   to: '/blog'
-  // },
+  {
+    label: 'Blog',
+    to: '/blog',
+    active: isRouteBlog.value
+  },
   {
     label: 'Projects',
     to: '/projects'
