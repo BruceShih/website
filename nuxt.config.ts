@@ -26,7 +26,8 @@ export default defineNuxtConfig({
     ],
     '@nuxt/ui',
     '@nuxt/image',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@pinia/nuxt'
   ],
   app: {
     head: {

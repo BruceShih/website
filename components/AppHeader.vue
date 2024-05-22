@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onClickOutside } from '@vueuse/core'
-import type { HorizontalNavigationLink } from '#ui/types'
 
 const open = ref(false)
 const target = ref(null)
@@ -9,41 +8,16 @@ defineShortcuts({
   o: () => open.value = !open.value
 })
 
-const route = useRoute()
-const isRouteBlog = computed(() => route.name === 'blog' || route.name === 'blog-slug')
+const router = useRouter()
+const headerLinks = useHeaderLinksStore()
+router.afterEach((to) => {
+  if (to.name === 'blog' || to.name === 'blog-slug')
+    headerLinks.setBlogLinkActive(true)
+  else
+    headerLinks.setBlogLinkActive(false)
+})
 
-const links = reactive<HorizontalNavigationLink[]>([
-  {
-    label: 'About',
-    to: '/'
-  },
-  {
-    label: 'Blog',
-    to: '/blog',
-    active: isRouteBlog.value
-  },
-  {
-    label: 'Projects',
-    to: '/projects'
-  },
-  {
-    label: 'Contact',
-    to: '/contact'
-  }
-])
-
-const socialLinks = reactive([
-  {
-    icon: 'i-lucide-twitter',
-    to: 'https://twitter.com/bruceshihtw'
-  },
-  {
-    icon: 'i-lucide-github',
-    to: 'https://github.com/BruceShih'
-  }
-])
-
-const verticalLinks = reactive([links])
+const verticalLinks = reactive([headerLinks.links])
 
 onClickOutside(target, () => {
   if (open.value)
@@ -56,10 +30,10 @@ onClickOutside(target, () => {
     <NuxtLink to="/" class="flex-grow md:flex-grow-0">
       <UAvatar alt="Bruce" size="lg" />
     </NuxtLink>
-    <UHorizontalNavigation :links="links" class="hidden md:flex md:justify-center" />
+    <UHorizontalNavigation :links="headerLinks.links" class="hidden md:flex md:justify-center" />
     <div class="flex">
       <UButton
-        v-for="(link, index) in socialLinks"
+        v-for="(link, index) in headerLinks.socialLinks"
         :key="index"
         :icon="link.icon"
         :to="link.to"
