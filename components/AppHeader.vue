@@ -8,8 +8,14 @@ defineShortcuts({
   o: () => open.value = !open.value
 })
 
+const route = useRoute()
 const router = useRouter()
 const headerLinks = useHeaderLinksStore()
+if (route.name === 'blog' || route.name === 'blog-slug')
+  headerLinks.setBlogLinkActive(true)
+else
+  headerLinks.setBlogLinkActive(false)
+
 router.afterEach((to) => {
   if (to.name === 'blog' || to.name === 'blog-slug')
     headerLinks.setBlogLinkActive(true)
