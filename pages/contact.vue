@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import type { PageStoryblok } from '~/component-types-sb'
 
+const { path } = useRoute()
 const client = useTypedStoryblokApi<PageStoryblok>()
-const response = await client.getStory('contact')
-const story = response.data.story
+const story = useState<TStory<PageStoryblok>['data']['story']>(path)
+try {
+  const data = await client.getStory('home')
+  story.value = data.story
+}
+catch (error) {
+  console.error(error)
+}
 
 useHead({
   title: 'Contact'

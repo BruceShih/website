@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import type { ProjectStoryblok } from '~/component-types-sb'
 
+const { path } = useRoute()
 const client = useTypedStoryblokApi<ProjectStoryblok>()
-const response = await client.getStories({
-  starts_with: 'projects',
-  sort_by: 'created_at:desc',
-  page: 1,
-  per_page: 10
-})
-const stories = useState<typeof response.data.stories>('projects', () => response.data.stories)
+const stories = useState<TStories<ProjectStoryblok>['data']['stories']>(path)
+try {
+  const data = await client.getStories({
+    starts_with: 'projects',
+    sort_by: 'created_at:desc',
+    page: 1,
+    per_page: 10
+  })
+  stories.value = data.stories
+}
+catch (error) {
+  console.error(error)
+}
 
 useHead({
   title: 'Projects'
