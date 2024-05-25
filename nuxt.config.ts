@@ -15,15 +15,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/eslint-module',
     '@vueuse/nuxt',
-    [
-      '@storyblok/nuxt',
-      {
-        accessToken: process.env.NUXT_STORYBLOK_TOKEN,
-        apiOptions: {
-          version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
-        }
-      }
-    ],
+    '@storyblok/nuxt',
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxtjs/seo',
@@ -56,6 +48,13 @@ export default defineNuxtConfig({
         separator: '-'
       },
       titleTemplate: '%pageTitle %separator %siteName'
+    }
+  },
+  storyblok: {
+    accessToken: process.env.NUXT_STORYBLOK_TOKEN,
+    bridge: false,
+    apiOptions: {
+      version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
     }
   },
   ui: {

@@ -3,11 +3,17 @@ import type { ArticleStoryblok } from '~/component-types-sb'
 
 const { path } = useRoute()
 const client = useTypedStoryblokApi<ArticleStoryblok>()
-const response = await client.getStory(path)
-const story = useState<typeof response.data.story>('blog', () => response.data.story)
+const story = useState<TStory<ArticleStoryblok>['data']['story']>(path)
+try {
+  const data = await client.getStory(path)
+  story.value = data.story
+}
+catch (error) {
+  console.error(error)
+}
 
 useHead({
-  title: story.value.content.title
+  title: story.value?.content.title || 'Blog'
 })
 </script>
 

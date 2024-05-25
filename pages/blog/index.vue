@@ -2,20 +2,27 @@
 import { UseTimeAgo } from '@vueuse/components'
 import type { ArticleStoryblok } from '~/component-types-sb'
 
+const { path } = useRoute()
 const client = useTypedStoryblokApi<ArticleStoryblok>()
-const response = await client.getStories({
-  starts_with: 'blog',
-  sort_by: 'created_at:desc',
-  page: 1,
-  per_page: 10
-})
-const stories = useState<typeof response.data.stories>('blogs', () => response.data.stories)
+const stories = useState<TStories<ArticleStoryblok>['data']['stories']>(path)
+try {
+  const data = await client.getStories({
+    starts_with: 'blog',
+    sort_by: 'created_at:desc',
+    page: 1,
+    per_page: 10
+  })
+  stories.value = data.stories
+}
+catch (error) {
+  console.error(error)
+}
 
 useHead({
   title: 'Blog'
 })
 
-function getFirstParagraph(story: typeof response.data.stories[0]) {
+function getFirstParagraph(story: TStories<ArticleStoryblok>['data']['stories'][0]) {
   const firstParagraph = story.content.content.content?.find(block => block.type === 'paragraph')
   if (firstParagraph) {
     const firstText = firstParagraph.content?.find(e => e.type === 'text')
@@ -58,7 +65,7 @@ function getFirstParagraph(story: typeof response.data.stories[0]) {
             </UseTimeAgo>
           </span>
         </div>
-        <UDivider v-if="index !== stories.length - 1" type="solid" />
+        <UDivider v-if="stories && index !== stories.length - 1" type="solid" />
       </template>
     </div>
   </UContainer>
