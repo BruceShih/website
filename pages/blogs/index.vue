@@ -45,7 +45,7 @@ function getFirstParagraph(story: TStories<ArticleStoryblok>['data']['stories'][
 <template>
   <UContainer>
     <StoryblokComponent v-if="story" :blok="story.content" />
-    <div class="py-6">
+    <div>
       <template v-for="(s, index) in stories" :key="s.id">
         <h2 class="text-xl mb-2">
           {{ s.content.title }}

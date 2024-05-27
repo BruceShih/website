@@ -12,7 +12,7 @@ const content = computed(() => renderRichText(props.blok.content))
   <h1 class="text-xl mb-2">
     {{ blok.title }}
   </h1>
-  <div class="mb-4" v-html="content" />
+  <article class="mb-4" v-html="content" />
   <div class="flex justify-end">
     <span class="mr-4 text-base-content text-sm">
       {{ new Date(blok.date).toDateString() }}
