@@ -1,13 +1,22 @@
 <script setup lang="ts">
 import { UseTimeAgo } from '@vueuse/components'
-import type { ArticleStoryblok } from '~/component-types-sb'
+import type { ArticleStoryblok, PageStoryblok } from '~/component-types-sb'
 
 const { path } = useRoute()
-const client = useTypedStoryblokApi<ArticleStoryblok>()
-const stories = useState<TStories<ArticleStoryblok>['data']['stories']>(path)
+const clientPage = useTypedStoryblokApi<PageStoryblok>()
+const clientArticle = useTypedStoryblokApi<ArticleStoryblok>()
+const story = useState<TStory<PageStoryblok>['data']['story']>(path)
 try {
-  const data = await client.getStories({
-    starts_with: 'blog',
+  const data = await clientPage.getStory('blog')
+  story.value = data.story
+}
+catch (error) {
+  console.error(error)
+}
+const stories = useState<TStories<ArticleStoryblok>['data']['stories']>(`${path}-stories`)
+try {
+  const data = await clientArticle.getStories({
+    starts_with: 'blogs',
     sort_by: 'created_at:desc',
     page: 1,
     per_page: 10
@@ -35,37 +44,35 @@ function getFirstParagraph(story: TStories<ArticleStoryblok>['data']['stories'][
 
 <template>
   <UContainer>
-    <h1 class="text-3xl font-bold">
-      Blog
-    </h1>
+    <StoryblokComponent v-if="story" :blok="story.content" />
     <div class="py-6">
-      <template v-for="(story, index) in stories" :key="story.id">
+      <template v-for="(s, index) in stories" :key="s.id">
         <h2 class="text-xl mb-2">
-          {{ story.content.title }}
+          {{ s.content.title }}
         </h2>
         <p class="mb-2">
-          {{ getFirstParagraph(story) }}
+          {{ getFirstParagraph(s) }}
         </p>
         <div class="flex justify-between">
           <ULink
-            v-if="story.full_slug"
+            v-if="s.full_slug"
             class="text-sm"
             active-class="text-primary"
             inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
-            :to="story.full_slug"
+            :to="s.full_slug"
           >
             ...Keep reading
           </ULink>
           <span class="mr-4 text-base-content text-sm">
             <UseTimeAgo
               v-slot="{ timeAgo }"
-              :time=" story.created_at"
+              :time=" s.created_at"
             >
               {{ timeAgo }}
             </UseTimeAgo>
           </span>
         </div>
-        <UDivider v-if="stories && index !== stories.length - 1" type="solid" />
+        <UDivider v-if="stories && index !== stories.length - 1" type="solid" class="my-6" />
       </template>
     </div>
   </UContainer>

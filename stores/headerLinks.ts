@@ -13,8 +13,8 @@ export const useHeaderLinksStore = defineStore('headerLinksStore', {
         to: '/'
       },
       {
-        label: 'Blog',
-        to: '/blog'
+        label: 'Blogs',
+        to: '/blogs'
       },
       {
         label: 'Projects',
