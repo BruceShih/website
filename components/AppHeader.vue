@@ -11,13 +11,13 @@ defineShortcuts({
 const route = useRoute()
 const router = useRouter()
 const headerLinks = useHeaderLinksStore()
-if (route.name === 'blog' || route.name === 'blog-slug')
+if (route.name === 'blogs' || route.name === 'blogs-slug')
   headerLinks.setBlogLinkActive(true)
 else
   headerLinks.setBlogLinkActive(false)
 
 router.afterEach((to) => {
-  if (to.name === 'blog' || to.name === 'blog-slug')
+  if (to.name === 'blogs' || to.name === 'blogs-slug')
     headerLinks.setBlogLinkActive(true)
   else
     headerLinks.setBlogLinkActive(false)

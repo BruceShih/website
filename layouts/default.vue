@@ -1,6 +1,6 @@
 <template>
   <AppHeader />
-  <main class="md-w-5xl md-ma px-4 pt-6 font-sans">
+  <main class="prose dark:prose-invert md:mx-auto md:max-w-5xl px-4 pt-6 font-sans">
     <NuxtPage />
   </main>
   <!-- <AppFooter /> -->

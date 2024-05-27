@@ -12,5 +12,5 @@ const content = computed(() => renderRichText(props.blok.body))
   <h1 class="text-3xl font-bold">
     {{ blok.title }}
   </h1>
-  <div class="py-6" v-html="content" />
+  <div v-html="content" />
 </template>

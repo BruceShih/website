@@ -27,7 +27,7 @@ useHead({
     <h1 class="text-3xl font-bold">
       Projects
     </h1>
-    <div class="py-6 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
+    <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
       <template v-for="story in stories" :key="story.id">
         <UCard class="relative h-40 overflow-hidden -z-10">
           <NuxtImg
