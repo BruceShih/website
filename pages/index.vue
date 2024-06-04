@@ -5,7 +5,7 @@ const { path } = useRoute()
 const client = useTypedStoryblokApi<HeroStoryblok>()
 const story = useState<TStory<HeroStoryblok>['data']['story']>(path)
 try {
-  const data = await client.getStory('home')
+  const { data } = await client.getStory('home')
   story.value = data.story
 }
 catch (error) {
