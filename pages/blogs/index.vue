@@ -2,12 +2,19 @@
 import { UseTimeAgo } from '@vueuse/components'
 import type { ArticleStoryblok, PageStoryblok } from '~/component-types-sb'
 
-const { path } = useRoute()
+useHead({
+  title: 'Blog'
+})
+
+const { path, query } = useRoute()
 const clientPage = useTypedStoryblokApi<PageStoryblok>()
 const clientArticle = useTypedStoryblokApi<ArticleStoryblok>()
+const page = ref(Number.parseInt(query.page as string || '1'))
+const pageSize = ref(10)
+const totalStories = ref(0)
 const story = useState<TStory<PageStoryblok>['data']['story']>(path)
 try {
-  const data = await clientPage.getStory('blog')
+  const { data } = await clientPage.getStory('blog')
   story.value = data.story
 }
 catch (error) {
@@ -15,20 +22,32 @@ catch (error) {
 }
 const stories = useState<TStories<ArticleStoryblok>['data']['stories']>(`${path}-stories`)
 try {
-  const data = await clientArticle.getStories({
+  const { headers, data } = await clientArticle.getStories({
     starts_with: 'blogs',
     sort_by: 'created_at:desc',
-    page: 1,
-    per_page: 10
+    page: page.value,
+    per_page: pageSize.value
   })
   stories.value = data.stories
+  totalStories.value = headers.total ? Number.parseInt(headers.total) : 0
 }
 catch (error) {
   console.error(error)
 }
 
-useHead({
-  title: 'Blog'
+watch(page, async (newPage) => {
+  try {
+    const { data } = await clientArticle.getStories({
+      starts_with: 'blogs',
+      sort_by: 'created_at:desc',
+      page: newPage,
+      per_page: pageSize.value
+    })
+    stories.value = data.stories
+  }
+  catch (error) {
+    console.error(error)
+  }
 })
 
 function getFirstParagraph(story: TStories<ArticleStoryblok>['data']['stories'][0]) {
@@ -75,5 +94,14 @@ function getFirstParagraph(story: TStories<ArticleStoryblok>['data']['stories'][
         <UDivider v-if="stories && index !== stories.length - 1" type="solid" class="my-6" />
       </template>
     </div>
+    <UPagination
+      v-model="page"
+      class="mt-8"
+      :page-count="pageSize"
+      :total="totalStories"
+      :to="(page: number) => ({
+        query: { page },
+      })"
+    />
   </UContainer>
 </template>

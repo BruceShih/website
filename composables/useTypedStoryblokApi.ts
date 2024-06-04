@@ -6,8 +6,7 @@ import type {
   ISbStoryData
 } from 'storyblok-js-client'
 
-export interface TStory<TStoryData>
-  extends Omit<ISbStory['data'], 'links' | 'rels' | 'story'> {
+export type TStory<TStoryData> = ISbStory & {
   data: {
     links: (ISbStoryData | ISbLinkURLObject)[]
     rels: ISbStoryData<TStoryData>[]
@@ -15,8 +14,7 @@ export interface TStory<TStoryData>
   }
 }
 
-export interface TStories<TStoryData>
-  extends Omit<ISbStories['data'], 'links' | 'rels' | 'stories'> {
+export type TStories<TStoryData> = ISbStories & {
   data: {
     links: (ISbStoryData | ISbLinkURLObject)[]
     rels: ISbStoryData<TStoryData>[]
@@ -30,13 +28,11 @@ export function useTypedStoryblokApi<S>() {
 
   const getStory = async (url: string) => {
     const path = url[0] === '/' ? url.substring(1) : url
-    const { data } = await client.get(`${base}${path}`) as unknown as TStory<S>
-    return data
+    return await client.get(`${base}${path}`) as unknown as TStory<S>
   }
 
   const getStories = async (params: ISbStoriesParams) => {
-    const { data } = await client.getStories(params) as unknown as TStories<S>
-    return data
+    return await client.getStories(params) as unknown as TStories<S>
   }
 
   return {

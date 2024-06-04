@@ -1,17 +1,21 @@
 <script setup lang="ts">
 import type { ProjectStoryblok } from '~/component-types-sb'
 
-const { path } = useRoute()
+const { path, query } = useRoute()
 const client = useTypedStoryblokApi<ProjectStoryblok>()
+const page = ref(Number.parseInt(query.page as string || '1'))
+const pageSize = ref(10)
+const totalStories = ref(0)
 const stories = useState<TStories<ProjectStoryblok>['data']['stories']>(path)
 try {
-  const data = await client.getStories({
+  const { headers, data } = await client.getStories({
     starts_with: 'projects',
     sort_by: 'created_at:desc',
     page: 1,
     per_page: 10
   })
   stories.value = data.stories
+  totalStories.value = headers.total ? Number.parseInt(headers.total) : 0
 }
 catch (error) {
   console.error(error)
@@ -60,6 +64,15 @@ useHead({
         </UCard>
       </template>
     </div>
+    <UPagination
+      v-model="page"
+      class="mt-8"
+      :page-count="pageSize"
+      :total="totalStories"
+      :to="(page: number) => ({
+        query: { page },
+      })"
+    />
   </UContainer>
 </template>
 
