@@ -14,23 +14,23 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.12.1",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.3"
+    "nuxt": "^3.12.3",
+    "vue": "^3.4.31",
+    "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@bruceshih/eslint-config-vue": "^1.7.3",
-    "@iconify-json/lucide": "^1.1.191",
+    "@bruceshih/eslint-config-vue": "^1.7.4",
+    "@iconify-json/lucide": "^1.1.198",
     "@nuxt/image": "^1.7.0",
-    "@nuxt/ui": "^2.16.0",
+    "@nuxt/ui": "^2.17.0",
     "@nuxtjs/apollo": "5.0.0-alpha.14",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@storyblok/nuxt": "^6.0.10",
-    "@vueuse/components": "^10.10.1",
-    "@vueuse/core": "^10.10.1",
-    "@vueuse/nuxt": "^10.10.1",
-    "eslint": "^9.4.0",
+    "@vueuse/components": "^10.11.0",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "eslint": "^9.6.0",
     "storyblok-generate-ts": "^2.1.0",
     "zod": "^3.23.8"
   }
