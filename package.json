@@ -19,8 +19,8 @@
     "vue-router": "^4.4.0"
   },
   "devDependencies": {
-    "@bruceshih/eslint-config-vue": "^1.7.4",
-    "@iconify-json/lucide": "^1.1.198",
+    "@bruceshih/eslint-config-vue": "^1.8.0",
+    "@iconify-json/lucide": "^1.1.199",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/apollo": "5.0.0-alpha.14",
