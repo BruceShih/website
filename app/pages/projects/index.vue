@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { ProjectStoryblok } from '~/component-types-sb'
+import type { ProjectStoryblok } from '../../component-types-sb'
 
 const { path, query } = useRoute()
 const client = useTypedStoryblokApi<ProjectStoryblok>()
