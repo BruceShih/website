@@ -6,20 +6,17 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-
+  compatibilityDate: '2024-07-18',
   experimental: {
     viewTransition: true
   },
-
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
-
   devServer: {
     https: {
       key: './localhost-key.pem',
       cert: './localhost.pem'
     }
   },
-
   modules: [
     '@nuxtjs/eslint-module',
     '@vueuse/nuxt',
@@ -29,7 +26,6 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@pinia/nuxt'
   ],
-
   app: {
     head: {
       meta: [
@@ -59,7 +55,6 @@ export default defineNuxtConfig({
       titleTemplate: '%pageTitle %separator %siteName'
     }
   },
-
   storyblok: {
     accessToken: process.env.NUXT_STORYBLOK_TOKEN,
     bridge: false,
@@ -67,16 +62,12 @@ export default defineNuxtConfig({
       version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
     }
   },
-
   ui: {
     icons: ['lucide']
   },
-
   site: {
     url: 'https://bruceshih.me',
     name: 'Website of Bruce Shih',
     description: 'I\'m Bruce SpeechSynthesis, I make websites'
-  },
-
-  compatibilityDate: '2024-07-18'
+  }
 })
