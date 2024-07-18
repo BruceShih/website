@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { UseTimeAgo } from '@vueuse/components'
-import type { ArticleStoryblok, PageStoryblok } from '~/component-types-sb'
+import type { ArticleStoryblok, PageStoryblok } from '../../component-types-sb'
 
 useHead({
   title: 'Blog'
