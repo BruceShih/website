@@ -2,7 +2,11 @@
 import process from 'node:process'
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
+  // opt-in to nuxt 4 features
+  future: {
+    compatibilityVersion: 4
+  },
+  compatibilityDate: '2024-07-18',
   experimental: {
     viewTransition: true
   },

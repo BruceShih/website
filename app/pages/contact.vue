@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { HeroStoryblok } from '~/component-types-sb'
+import type { PageStoryblok } from '../component-types-sb'
 
 const { path } = useRoute()
-const client = useTypedStoryblokApi<HeroStoryblok>()
-const story = useState<TStory<HeroStoryblok>['data']['story']>(path)
+const client = useTypedStoryblokApi<PageStoryblok>()
+const story = useState<TStory<PageStoryblok>['data']['story']>(path)
 try {
-  const { data } = await client.getStory('home')
+  const { data } = await client.getStory('contact')
   story.value = data.story
 }
 catch (error) {
@@ -13,7 +13,7 @@ catch (error) {
 }
 
 useHead({
-  title: 'Home'
+  title: 'Contact'
 })
 </script>
 
