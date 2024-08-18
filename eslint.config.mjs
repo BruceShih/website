@@ -10,7 +10,7 @@ export default antfu({
 }, {
   rules: {
     'style/comma-dangle': ['error', 'never'],
-    'style/max-len': ['error', { code: 100, ignoreUrls: true }],
+    'style/max-len': ['error', { code: 140, ignoreStrings: true }],
     'style/multiline-ternary': ['error', 'always-multiline'],
     'style/no-tabs': ['error', { allowIndentationTabs: false }],
     'style/quotes': ['error', 'single']
