@@ -10,20 +10,39 @@ defineShortcuts({
 
 const route = useRoute()
 const router = useRouter()
+const { navigation } = useContent()
+const appConfig = useAppConfig()
 const headerLinks = useHeaderLinksStore()
-if (route.name === 'blogs' || route.name === 'blogs-slug')
+
+headerLinks.links = navigation.value.map(link => ({
+  label: link.title,
+  to: link._path
+}))
+headerLinks.socialLinks = [
+  {
+    label: 'Twitter',
+    icon: 'i-lucide-twitter',
+    to: `https://twitter.com/${appConfig.socials?.twitter}`
+  },
+  {
+    label: 'GitHub',
+    icon: 'i-lucide-github',
+    to: `https://github.com/${appConfig.socials?.github}`
+  }
+]
+const verticalLinks = reactive([headerLinks.links])
+
+if (route.path.startsWith('/blog'))
   headerLinks.setBlogLinkActive(true)
 else
   headerLinks.setBlogLinkActive(false)
 
-router.afterEach((to) => {
-  if (to.name === 'blogs' || to.name === 'blogs-slug')
+router.afterEach(() => {
+  if (route.path.startsWith('/blog'))
     headerLinks.setBlogLinkActive(true)
   else
     headerLinks.setBlogLinkActive(false)
 })
-
-const verticalLinks = reactive([headerLinks.links])
 
 onClickOutside(target, () => {
   if (open.value)

@@ -6,26 +6,30 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4
   },
-  compatibilityDate: '2024-07-18',
+  compatibilityDate: '2024-08-20',
   experimental: {
     viewTransition: true
   },
   devtools: { enabled: process.env.NODE_ENV !== 'production' },
   devServer: {
-    https: {
-      key: './localhost-key.pem',
-      cert: './localhost.pem'
-    }
+    https: true
+  },
+  // extends: 'content-wind',
+  routeRules: {
+    '/': { prerender: true }
   },
   modules: [
+    '@nuxt/content',
     '@nuxtjs/eslint-module',
     '@vueuse/nuxt',
-    '@storyblok/nuxt',
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxtjs/seo',
     '@pinia/nuxt'
   ],
+  content: {
+    documentDriven: true
+  },
   app: {
     head: {
       meta: [
@@ -55,19 +59,12 @@ export default defineNuxtConfig({
       titleTemplate: '%pageTitle %separator %siteName'
     }
   },
-  storyblok: {
-    accessToken: process.env.NUXT_STORYBLOK_TOKEN,
-    bridge: false,
-    apiOptions: {
-      version: process.env.NODE_ENV === 'production' ? 'published' : 'draft'
-    }
-  },
   ui: {
     icons: ['lucide']
   },
   site: {
     url: 'https://bruceshih.me',
     name: 'Website of Bruce Shih',
-    description: 'I\'m Bruce SpeechSynthesis, I make websites'
+    description: 'I\'m Bruce, I make websites'
   }
 })

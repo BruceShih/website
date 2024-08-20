@@ -6,41 +6,13 @@ interface HeaderLinksState {
 }
 
 export const useHeaderLinksStore = defineStore('headerLinksStore', {
-  state: (): HeaderLinksState => ({
-    links: [
-      {
-        label: 'About',
-        to: '/'
-      },
-      {
-        label: 'Blogs',
-        to: '/blogs'
-      },
-      {
-        label: 'Projects',
-        to: '/projects'
-      },
-      {
-        label: 'Contact',
-        to: '/contact'
-      }
-    ],
-    socialLinks: [
-      {
-        label: 'Twitter',
-        icon: 'i-lucide-twitter',
-        to: 'https://twitter.com/bruceshihtw'
-      },
-      {
-        label: 'GitHub',
-        icon: 'i-lucide-github',
-        to: 'https://github.com/BruceShih'
-      }
-    ]
-  }),
+  state: (): HeaderLinksState => {
+    return {} as HeaderLinksState
+  },
   actions: {
     setBlogLinkActive(active: boolean) {
-      this.links[1].active = active
+      if (this.links[1])
+        this.links[1].active = active
     }
   }
 })
