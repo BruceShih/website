@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/image',
     '@nuxtjs/seo',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxthq/studio'
   ],
   content: {
     documentDriven: true
