@@ -3,36 +3,28 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "postinstall": "nuxt prepare",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "generate-sb-types": "storyblok-generate-ts unknownAny=true strictIndexSignatures=true source=./components.128781.json target=./component-types-sb",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
-  },
-  "dependencies": {
-    "@pinia/nuxt": "^0.5.1",
-    "nuxt": "^3.12.4",
-    "vue": "^3.4.33",
-    "vue-router": "^4.4.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.26.0",
     "@iconify-json/lucide": "^1.1.201",
+    "@nuxt/content": "^2.13.2",
     "@nuxt/image": "^1.7.0",
-    "@nuxt/ui": "^2.17.0",
-    "@nuxtjs/apollo": "5.0.0-alpha.14",
+    "@nuxt/ui": "^2.18.4",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@nuxtjs/seo": "2.0.0-rc.10",
-    "@storyblok/nuxt": "^6.0.10",
+    "@pinia/nuxt": "^0.5.1",
     "@vueuse/components": "^10.11.0",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "^10.11.0",
     "eslint": "^9.7.0",
     "eslint-plugin-format": "^0.1.2",
-    "storyblok-generate-ts": "^2.1.0",
-    "zod": "^3.23.8"
+    "nuxt": "^3.12.4"
   }
 }
