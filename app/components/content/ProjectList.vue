@@ -1,24 +1,32 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+import type { QueryBuilderParams } from '@nuxt/content'
 
-const query: QueryBuilderParams = { path: '/projects', where: [{ title: { $ne: 'Projects' } }], limit: 20, sort: [{ title: 1 }] }
+const query: QueryBuilderParams = {
+  path: '/projects',
+  where: [{ title: { $ne: 'Projects' } }],
+  limit: 20,
+  sort: [{ title: 1 }]
+}
 </script>
 
 <template>
   <ContentList :query="query">
     <template #default="{ list }">
       <div class="not-prose grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
-        <template v-for="project in list" :key="project._path">
+        <template
+          v-for="project in list"
+          :key="project._path"
+        >
           <UCard class="relative h-40 overflow-hidden">
             <NuxtImg
-              :src="project.preview"
               :alt="`Preview of ${project.title}`"
               class="preview-image absolute -top-5 right-0 w-3/5 opacity-50"
+              :src="project.preview"
             />
             <h2 class="text-xl mb-2 mx-2">
               <ULink
-                :to="project.link"
                 target="_blank"
+                :to="project.link"
               >
                 {{ project.title }}
               </ULink>
@@ -27,12 +35,12 @@ const query: QueryBuilderParams = { path: '/projects', where: [{ title: { $ne: '
               {{ project.description }}
             </p>
             <UButton
-              :to="project.repository"
               class="mx-2"
-              target="_blank"
-              size="sm"
               color="primary"
+              size="sm"
               square
+              target="_blank"
+              :to="project.repository"
               variant="link"
             >
               Repository

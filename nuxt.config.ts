@@ -15,9 +15,6 @@ export default defineNuxtConfig({
     https: true
   },
   // extends: 'content-wind',
-  routeRules: {
-    '/': { prerender: true }
-  },
   modules: [
     '@nuxt/content',
     '@nuxtjs/eslint-module',
@@ -28,6 +25,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxthq/studio'
   ],
+  css: ['~/main.css'],
   content: {
     documentDriven: true
   },
@@ -59,9 +57,6 @@ export default defineNuxtConfig({
       },
       titleTemplate: '%pageTitle %separator %siteName'
     }
-  },
-  ui: {
-    icons: ['lucide']
   },
   site: {
     url: 'https://bruceshih.me',
