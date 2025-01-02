@@ -1,14 +1,22 @@
 <script setup lang="ts">
-import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+import type { QueryBuilderParams } from '@nuxt/content'
 import { UseTimeAgo } from '@vueuse/components'
 
-const query: QueryBuilderParams = { path: '/blog', where: [{ title: { $ne: 'Blog' } }], limit: 10, sort: [{ created: -1 }] }
+const query: QueryBuilderParams = {
+  path: '/blog',
+  where: [{ title: { $ne: 'Blog' } }],
+  limit: 10,
+  sort: [{ created: -1 }]
+}
 </script>
 
 <template>
   <ContentList :query="query">
     <template #default="{ list }">
-      <div v-for="(blog, index) in list" :key="blog._path">
+      <div
+        v-for="(blog, index) in list"
+        :key="blog._path"
+      >
         <h2 class="text-xl mb-2">
           {{ blog.title }}
         </h2>
@@ -19,10 +27,10 @@ const query: QueryBuilderParams = { path: '/blog', where: [{ title: { $ne: 'Blog
         <div class="flex justify-between items-end">
           <ULink
             :key="blog._path"
-            :to="blog._path"
-            class="text-sm"
             active-class="text-primary"
+            class="text-sm"
             inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+            :to="blog._path"
           >
             ...Keep reading
           </ULink>
@@ -35,7 +43,11 @@ const query: QueryBuilderParams = { path: '/blog', where: [{ title: { $ne: 'Blog
             </UseTimeAgo>
           </span>
         </div>
-        <UDivider v-if="list && index !== list.length - 1" type="solid" class="my-6" />
+        <USeparator
+          v-if="list && index !== list.length - 1"
+          class="my-6"
+          type="solid"
+        />
       </div>
     </template>
 

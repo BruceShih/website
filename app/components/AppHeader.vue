@@ -52,27 +52,44 @@ onClickOutside(target, () => {
 
 <template>
   <UContainer class="h-24 flex md:justify-between items-center sticky">
-    <NuxtLink to="/" class="flex-grow md:flex-grow-0">
-      <UAvatar alt="Bruce" size="lg" />
+    <NuxtLink
+      class="flex-grow md:flex-grow-0"
+      to="/"
+    >
+      <UAvatar
+        alt="Bruce"
+        size="lg"
+      />
     </NuxtLink>
-    <UHorizontalNavigation :links="headerLinks.links" class="hidden md:flex md:justify-center" />
+    <UNavigationMenu
+      class="hidden md:flex md:justify-center"
+      color="neutral"
+      :items="headerLinks.links"
+      variant="link"
+    />
     <div class="flex">
       <UButton
         v-for="(link, index) in headerLinks.socialLinks"
         :key="index"
+        color="neutral"
         :icon="link.icon"
-        :to="link.to"
-        target="_blank"
         size="lg"
+        target="_blank"
+        :to="link.to"
         variant="link"
       />
     </div>
 
-    <UDropdown
-      :items="verticalLinks"
+    <UDropdownMenu
       class="md:hidden"
+      :items="verticalLinks"
     >
-      <UButton icon="i-lucide-menu" size="lg" variant="link" />
-    </UDropdown>
+      <UButton
+        color="neutral"
+        icon="i-lucide-menu"
+        size="lg"
+        variant="link"
+      />
+    </UDropdownMenu>
   </UContainer>
 </template>
