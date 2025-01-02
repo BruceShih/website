@@ -1,4 +1,5 @@
 import antfu from '@antfu/eslint-config'
+import oxlint from 'eslint-plugin-oxlint'
 
 export default antfu({
   formatters: true,
@@ -15,4 +16,4 @@ export default antfu({
     'style/no-tabs': ['error', { allowIndentationTabs: false }],
     'style/quotes': ['error', 'single']
   }
-})
+}).prepend(oxlint.configs['flat/recommended'])
