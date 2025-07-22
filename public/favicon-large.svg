@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style>
+      .terminal-bg { fill: #000000; }
+      .terminal-text { 
+        font-family: 'Courier New', monospace; 
+        font-size: 36px; 
+        font-weight: bold; 
+        text-anchor: middle; 
+        fill: #00ff41; 
+      }
+      .terminal-border { 
+        fill: none; 
+        stroke: #00ff41; 
+        stroke-width: 2; 
+        opacity: 0.3; 
+      }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" class="terminal-bg"/>
+  
+  <!-- Optional border for terminal feel -->
+  <rect x="4" y="4" width="56" height="56" rx="4" class="terminal-border"/>
+  
+  <!-- Letter B -->
+  <text x="32" y="44" class="terminal-text">B</text>
+</svg>

@@ -6,6 +6,17 @@ export default defineNuxtConfig({
   modules: ['@nuxthub/core', '@nuxt/eslint', 'shadcn-nuxt', '@nuxtjs/color-mode', '@nuxt/icon'],
   // https://devtools.nuxt.com
   devtools: { enabled: true },
+  app: {
+    head: {
+      title: 'bruceshih',
+      htmlAttrs: {
+        lang: 'en'
+      },
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+      ]
+    }
+  },
   css: ['./app/assets/css/tailwind.css'],
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
